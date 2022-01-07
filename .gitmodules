@@ -1,0 +1,3 @@
+[submodule "EFT2Obs"]
+	path = EFT2Obs
+	url = https://github.com/ajgilbert/EFT2Obs.git
