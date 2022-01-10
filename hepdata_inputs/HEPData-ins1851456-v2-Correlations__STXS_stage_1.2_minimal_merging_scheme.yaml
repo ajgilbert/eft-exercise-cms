@@ -1,0 +1,2948 @@
+dependent_variables:
+- header:
+    name: Observed correlation
+  qualifiers:
+  - name: SQRT(S)
+    units: TeV
+    value: 13
+  - name: ABS(YRAP(HIGGS))
+    value: <2.5
+  - name: MH
+    units: GeV
+    value: '125.38'
+  values:
+  - value: 1.0
+  - value: -0.037
+  - value: 0.005
+  - value: 0.012
+  - value: 0.007
+  - value: -0.022
+  - value: 0.001
+  - value: 0.0
+  - value: 0.007
+  - value: 0.001
+  - value: 0.003
+  - value: 0.002
+  - value: 0.005
+  - value: 0.002
+  - value: 0.001
+  - value: 0.004
+  - value: 0.002
+  - value: 0.003
+  - value: 0.002
+  - value: 0.002
+  - value: 0.003
+  - value: 0.003
+  - value: 0.004
+  - value: 0.002
+  - value: 0.001
+  - value: -0.0
+  - value: 0.003
+  - value: -0.037
+  - value: 1.0
+  - value: -0.336
+  - value: -0.001
+  - value: 0.028
+  - value: -0.011
+  - value: -0.004
+  - value: -0.003
+  - value: 0.019
+  - value: 0.006
+  - value: 0.006
+  - value: 0.012
+  - value: 0.008
+  - value: 0.016
+  - value: -0.014
+  - value: 0.009
+  - value: 0.005
+  - value: 0.011
+  - value: 0.0
+  - value: 0.005
+  - value: 0.009
+  - value: -0.002
+  - value: 0.004
+  - value: -0.003
+  - value: -0.003
+  - value: -0.005
+  - value: 0.011
+  - value: 0.005
+  - value: -0.336
+  - value: 1.0
+  - value: -0.007
+  - value: 0.003
+  - value: -0.339
+  - value: 0.015
+  - value: -0.001
+  - value: 0.003
+  - value: -0.002
+  - value: 0.001
+  - value: -0.011
+  - value: 0.011
+  - value: -0.008
+  - value: 0.017
+  - value: 0.017
+  - value: 0.005
+  - value: -0.023
+  - value: 0.009
+  - value: -0.004
+  - value: -0.001
+  - value: 0.013
+  - value: 0.005
+  - value: -0.001
+  - value: -0.004
+  - value: -0.01
+  - value: 0.016
+  - value: 0.012
+  - value: -0.001
+  - value: -0.007
+  - value: 1.0
+  - value: 0.009
+  - value: 0.015
+  - value: -0.394
+  - value: 0.015
+  - value: 0.016
+  - value: 0.0
+  - value: 0.005
+  - value: -0.053
+  - value: 0.016
+  - value: -0.036
+  - value: -0.011
+  - value: 0.047
+  - value: -0.0
+  - value: -0.016
+  - value: -0.013
+  - value: 0.007
+  - value: -0.0
+  - value: -0.0
+  - value: 0.003
+  - value: -0.011
+  - value: -0.014
+  - value: -0.022
+  - value: 0.027
+  - value: 0.007
+  - value: 0.028
+  - value: 0.003
+  - value: 0.009
+  - value: 1.0
+  - value: 0.0
+  - value: 0.008
+  - value: -0.255
+  - value: 0.005
+  - value: 0.002
+  - value: 0.002
+  - value: -0.022
+  - value: -0.026
+  - value: -0.032
+  - value: -0.042
+  - value: 0.042
+  - value: 0.003
+  - value: 0.005
+  - value: -0.004
+  - value: -0.004
+  - value: 0.002
+  - value: -0.003
+  - value: -0.01
+  - value: -0.007
+  - value: -0.016
+  - value: -0.026
+  - value: 0.03
+  - value: -0.022
+  - value: -0.011
+  - value: -0.339
+  - value: 0.015
+  - value: 0.0
+  - value: 1.0
+  - value: 0.0
+  - value: 0.027
+  - value: 0.021
+  - value: 0.009
+  - value: 0.008
+  - value: -0.005
+  - value: -0.032
+  - value: 0.004
+  - value: 0.002
+  - value: -0.083
+  - value: -0.0
+  - value: -0.006
+  - value: 0.006
+  - value: 0.009
+  - value: 0.003
+  - value: -0.023
+  - value: 0.017
+  - value: 0.024
+  - value: 0.026
+  - value: 0.031
+  - value: -0.035
+  - value: 0.001
+  - value: -0.004
+  - value: 0.015
+  - value: -0.394
+  - value: 0.008
+  - value: 0.0
+  - value: 1.0
+  - value: -0.002
+  - value: 0.027
+  - value: 0.015
+  - value: 0.009
+  - value: 0.004
+  - value: -0.053
+  - value: 0.005
+  - value: 0.009
+  - value: -0.177
+  - value: -0.002
+  - value: 0.002
+  - value: 0.004
+  - value: 0.013
+  - value: 0.003
+  - value: 0.015
+  - value: -0.013
+  - value: 0.037
+  - value: 0.041
+  - value: 0.052
+  - value: -0.059
+  - value: 0.0
+  - value: -0.003
+  - value: -0.001
+  - value: 0.015
+  - value: -0.255
+  - value: 0.027
+  - value: -0.002
+  - value: 1.0
+  - value: 0.019
+  - value: 0.023
+  - value: 0.008
+  - value: 0.014
+  - value: -0.09
+  - value: 0.01
+  - value: -0.019
+  - value: -0.295
+  - value: 0.003
+  - value: 0.008
+  - value: -0.001
+  - value: 0.021
+  - value: 0.003
+  - value: 0.016
+  - value: 0.029
+  - value: 0.014
+  - value: 0.058
+  - value: 0.076
+  - value: -0.089
+  - value: 0.007
+  - value: 0.019
+  - value: 0.003
+  - value: 0.016
+  - value: 0.005
+  - value: 0.021
+  - value: 0.027
+  - value: 0.019
+  - value: 1.0
+  - value: 0.014
+  - value: 0.023
+  - value: 0.003
+  - value: -0.025
+  - value: -0.001
+  - value: 0.005
+  - value: -0.162
+  - value: -0.328
+  - value: 0.009
+  - value: 0.012
+  - value: 0.021
+  - value: 0.006
+  - value: 0.018
+  - value: 0.024
+  - value: 0.045
+  - value: 0.014
+  - value: 0.07
+  - value: -0.078
+  - value: 0.001
+  - value: 0.006
+  - value: -0.002
+  - value: 0.0
+  - value: 0.002
+  - value: 0.009
+  - value: 0.015
+  - value: 0.023
+  - value: 0.014
+  - value: 1.0
+  - value: -0.022
+  - value: -0.002
+  - value: 0.007
+  - value: -0.0
+  - value: -0.001
+  - value: -0.087
+  - value: -0.076
+  - value: 0.005
+  - value: 0.009
+  - value: 0.006
+  - value: 0.003
+  - value: 0.01
+  - value: 0.015
+  - value: 0.028
+  - value: 0.039
+  - value: -0.01
+  - value: -0.055
+  - value: 0.003
+  - value: 0.006
+  - value: 0.001
+  - value: 0.005
+  - value: 0.002
+  - value: 0.008
+  - value: 0.009
+  - value: 0.008
+  - value: 0.023
+  - value: -0.022
+  - value: 1.0
+  - value: -0.005
+  - value: 0.078
+  - value: 0.001
+  - value: 0.0
+  - value: 0.006
+  - value: -0.023
+  - value: 0.004
+  - value: 0.011
+  - value: 0.011
+  - value: 0.003
+  - value: 0.012
+  - value: 0.022
+  - value: 0.036
+  - value: 0.046
+  - value: 0.005
+  - value: -0.066
+  - value: 0.002
+  - value: 0.012
+  - value: -0.011
+  - value: -0.053
+  - value: -0.022
+  - value: -0.005
+  - value: 0.004
+  - value: 0.014
+  - value: 0.003
+  - value: -0.002
+  - value: -0.005
+  - value: 1.0
+  - value: -0.462
+  - value: -0.143
+  - value: 0.057
+  - value: -0.002
+  - value: 0.006
+  - value: -0.002
+  - value: -0.004
+  - value: -0.006
+  - value: 0.0
+  - value: -0.002
+  - value: -0.0
+  - value: -0.004
+  - value: -0.016
+  - value: -0.022
+  - value: 0.029
+  - value: 0.005
+  - value: 0.008
+  - value: 0.011
+  - value: 0.016
+  - value: -0.026
+  - value: -0.032
+  - value: -0.053
+  - value: -0.09
+  - value: -0.025
+  - value: 0.007
+  - value: 0.078
+  - value: -0.462
+  - value: 1.0
+  - value: 0.102
+  - value: -0.174
+  - value: 0.051
+  - value: -0.007
+  - value: 0.007
+  - value: 0.011
+  - value: 0.02
+  - value: 0.001
+  - value: 0.015
+  - value: 0.028
+  - value: 0.032
+  - value: 0.061
+  - value: 0.079
+  - value: -0.091
+  - value: 0.002
+  - value: 0.016
+  - value: -0.008
+  - value: -0.036
+  - value: -0.032
+  - value: 0.004
+  - value: 0.005
+  - value: 0.01
+  - value: -0.001
+  - value: -0.0
+  - value: 0.001
+  - value: -0.143
+  - value: 0.102
+  - value: 1.0
+  - value: -0.523
+  - value: -0.003
+  - value: 0.003
+  - value: -0.0
+  - value: -0.004
+  - value: -0.003
+  - value: -0.001
+  - value: -0.004
+  - value: 0.004
+  - value: -0.006
+  - value: -0.006
+  - value: -0.009
+  - value: 0.014
+  - value: 0.001
+  - value: -0.014
+  - value: 0.017
+  - value: -0.011
+  - value: -0.042
+  - value: 0.002
+  - value: 0.009
+  - value: -0.019
+  - value: 0.005
+  - value: -0.001
+  - value: 0.0
+  - value: 0.057
+  - value: -0.174
+  - value: -0.523
+  - value: 1.0
+  - value: 0.009
+  - value: -0.009
+  - value: -0.0
+  - value: 0.002
+  - value: 0.004
+  - value: -0.002
+  - value: 0.01
+  - value: 0.013
+  - value: 0.02
+  - value: 0.02
+  - value: 0.022
+  - value: -0.024
+  - value: 0.004
+  - value: 0.009
+  - value: 0.017
+  - value: 0.047
+  - value: 0.042
+  - value: -0.083
+  - value: -0.177
+  - value: -0.295
+  - value: -0.162
+  - value: -0.087
+  - value: 0.006
+  - value: -0.002
+  - value: 0.051
+  - value: -0.003
+  - value: 0.009
+  - value: 1.0
+  - value: 0.05
+  - value: 0.01
+  - value: 0.017
+  - value: 0.031
+  - value: 0.005
+  - value: 0.026
+  - value: 0.037
+  - value: 0.068
+  - value: 0.085
+  - value: 0.116
+  - value: -0.14
+  - value: 0.002
+  - value: 0.005
+  - value: 0.005
+  - value: -0.0
+  - value: 0.003
+  - value: -0.0
+  - value: -0.002
+  - value: 0.003
+  - value: -0.328
+  - value: -0.076
+  - value: -0.023
+  - value: 0.006
+  - value: -0.007
+  - value: 0.003
+  - value: -0.009
+  - value: 0.05
+  - value: 1.0
+  - value: 0.001
+  - value: 0.001
+  - value: 0.001
+  - value: -0.001
+  - value: 0.003
+  - value: 0.007
+  - value: 0.006
+  - value: 0.012
+  - value: 0.005
+  - value: -0.005
+  - value: 0.003
+  - value: 0.011
+  - value: -0.023
+  - value: -0.016
+  - value: 0.005
+  - value: -0.006
+  - value: 0.002
+  - value: 0.008
+  - value: 0.009
+  - value: 0.005
+  - value: 0.004
+  - value: -0.002
+  - value: 0.007
+  - value: -0.0
+  - value: -0.0
+  - value: 0.01
+  - value: 0.001
+  - value: 1.0
+  - value: -0.299
+  - value: 0.077
+  - value: -0.009
+  - value: 0.002
+  - value: 0.014
+  - value: 0.031
+  - value: 0.042
+  - value: 0.056
+  - value: -0.069
+  - value: 0.002
+  - value: 0.0
+  - value: 0.009
+  - value: -0.013
+  - value: -0.004
+  - value: 0.006
+  - value: 0.004
+  - value: -0.001
+  - value: 0.012
+  - value: 0.009
+  - value: 0.011
+  - value: -0.004
+  - value: 0.011
+  - value: -0.004
+  - value: 0.002
+  - value: 0.017
+  - value: 0.001
+  - value: -0.299
+  - value: 1.0
+  - value: -0.223
+  - value: -0.098
+  - value: 0.019
+  - value: 0.023
+  - value: 0.049
+  - value: 0.067
+  - value: 0.093
+  - value: -0.11
+  - value: 0.002
+  - value: 0.005
+  - value: -0.004
+  - value: 0.007
+  - value: -0.004
+  - value: 0.009
+  - value: 0.013
+  - value: 0.021
+  - value: 0.021
+  - value: 0.006
+  - value: 0.011
+  - value: -0.006
+  - value: 0.02
+  - value: -0.003
+  - value: 0.004
+  - value: 0.031
+  - value: 0.001
+  - value: 0.077
+  - value: -0.223
+  - value: 1.0
+  - value: -0.102
+  - value: 0.037
+  - value: 0.059
+  - value: 0.098
+  - value: 0.125
+  - value: 0.162
+  - value: -0.21
+  - value: 0.003
+  - value: 0.009
+  - value: -0.001
+  - value: -0.0
+  - value: 0.002
+  - value: 0.003
+  - value: 0.003
+  - value: 0.003
+  - value: 0.006
+  - value: 0.003
+  - value: 0.003
+  - value: 0.0
+  - value: 0.001
+  - value: -0.001
+  - value: -0.002
+  - value: 0.005
+  - value: -0.001
+  - value: -0.009
+  - value: -0.098
+  - value: -0.102
+  - value: 1.0
+  - value: 0.004
+  - value: 0.007
+  - value: 0.013
+  - value: 0.016
+  - value: 0.023
+  - value: -0.031
+  - value: 0.003
+  - value: -0.002
+  - value: 0.013
+  - value: -0.0
+  - value: -0.003
+  - value: -0.023
+  - value: 0.015
+  - value: 0.016
+  - value: 0.018
+  - value: 0.01
+  - value: 0.012
+  - value: -0.002
+  - value: 0.015
+  - value: -0.004
+  - value: 0.01
+  - value: 0.026
+  - value: 0.003
+  - value: 0.002
+  - value: 0.019
+  - value: 0.037
+  - value: 0.004
+  - value: 1.0
+  - value: 0.021
+  - value: 0.089
+  - value: 0.11
+  - value: 0.142
+  - value: -0.168
+  - value: 0.004
+  - value: 0.004
+  - value: 0.005
+  - value: 0.003
+  - value: -0.01
+  - value: 0.017
+  - value: -0.013
+  - value: 0.029
+  - value: 0.024
+  - value: 0.015
+  - value: 0.022
+  - value: -0.0
+  - value: 0.028
+  - value: 0.004
+  - value: 0.013
+  - value: 0.037
+  - value: 0.007
+  - value: 0.014
+  - value: 0.023
+  - value: 0.059
+  - value: 0.007
+  - value: 0.021
+  - value: 1.0
+  - value: 0.118
+  - value: 0.181
+  - value: 0.238
+  - value: -0.277
+  - value: 0.002
+  - value: -0.003
+  - value: -0.001
+  - value: -0.011
+  - value: -0.007
+  - value: 0.024
+  - value: 0.037
+  - value: 0.014
+  - value: 0.045
+  - value: 0.028
+  - value: 0.036
+  - value: -0.004
+  - value: 0.032
+  - value: -0.006
+  - value: 0.02
+  - value: 0.068
+  - value: 0.006
+  - value: 0.031
+  - value: 0.049
+  - value: 0.098
+  - value: 0.013
+  - value: 0.089
+  - value: 0.118
+  - value: 1.0
+  - value: 0.293
+  - value: 0.424
+  - value: -0.499
+  - value: 0.001
+  - value: -0.003
+  - value: -0.004
+  - value: -0.014
+  - value: -0.016
+  - value: 0.026
+  - value: 0.041
+  - value: 0.058
+  - value: 0.014
+  - value: 0.039
+  - value: 0.046
+  - value: -0.016
+  - value: 0.061
+  - value: -0.006
+  - value: 0.02
+  - value: 0.085
+  - value: 0.012
+  - value: 0.042
+  - value: 0.067
+  - value: 0.125
+  - value: 0.016
+  - value: 0.11
+  - value: 0.181
+  - value: 0.293
+  - value: 1.0
+  - value: 0.505
+  - value: -0.622
+  - value: -0.0
+  - value: -0.005
+  - value: -0.01
+  - value: -0.022
+  - value: -0.026
+  - value: 0.031
+  - value: 0.052
+  - value: 0.076
+  - value: 0.07
+  - value: -0.01
+  - value: 0.005
+  - value: -0.022
+  - value: 0.079
+  - value: -0.009
+  - value: 0.022
+  - value: 0.116
+  - value: 0.005
+  - value: 0.056
+  - value: 0.093
+  - value: 0.162
+  - value: 0.023
+  - value: 0.142
+  - value: 0.238
+  - value: 0.424
+  - value: 0.505
+  - value: 1.0
+  - value: -0.84
+  - value: 0.003
+  - value: 0.011
+  - value: 0.016
+  - value: 0.027
+  - value: 0.03
+  - value: -0.035
+  - value: -0.059
+  - value: -0.089
+  - value: -0.078
+  - value: -0.055
+  - value: -0.066
+  - value: 0.029
+  - value: -0.091
+  - value: 0.014
+  - value: -0.024
+  - value: -0.14
+  - value: -0.005
+  - value: -0.069
+  - value: -0.11
+  - value: -0.21
+  - value: -0.031
+  - value: -0.168
+  - value: -0.277
+  - value: -0.499
+  - value: -0.622
+  - value: -0.84
+  - value: 1.0
+- header:
+    name: Expected correlation
+  qualifiers:
+  - name: SQRT(S)
+    units: TeV
+    value: 13
+  - name: ABS(YRAP(HIGGS))
+    value: <2.5
+  - name: MH
+    units: GeV
+    value: '125.38'
+  values:
+  - value: 1.0
+  - value: -0.039
+  - value: 0.006
+  - value: 0.013
+  - value: 0.007
+  - value: -0.021
+  - value: 0.005
+  - value: 0.005
+  - value: 0.008
+  - value: 0.004
+  - value: 0.002
+  - value: 0.003
+  - value: 0.003
+  - value: 0.005
+  - value: 0.002
+  - value: 0.004
+  - value: 0.003
+  - value: 0.003
+  - value: 0.002
+  - value: 0.002
+  - value: 0.004
+  - value: 0.004
+  - value: 0.004
+  - value: 0.004
+  - value: 0.002
+  - value: 0.001
+  - value: 0.001
+  - value: -0.039
+  - value: 1.0
+  - value: -0.335
+  - value: -0.002
+  - value: 0.02
+  - value: -0.006
+  - value: 0.004
+  - value: 0.008
+  - value: 0.02
+  - value: 0.009
+  - value: 0.004
+  - value: 0.007
+  - value: 0.004
+  - value: 0.008
+  - value: -0.005
+  - value: 0.005
+  - value: 0.001
+  - value: 0.006
+  - value: 0.004
+  - value: 0.005
+  - value: 0.007
+  - value: 0.004
+  - value: 0.003
+  - value: 0.004
+  - value: 0.004
+  - value: 0.002
+  - value: -0.0
+  - value: 0.006
+  - value: -0.335
+  - value: 1.0
+  - value: -0.011
+  - value: 0.002
+  - value: -0.337
+  - value: 0.02
+  - value: 0.004
+  - value: 0.004
+  - value: 0.001
+  - value: 0.001
+  - value: -0.01
+  - value: 0.007
+  - value: -0.004
+  - value: 0.015
+  - value: 0.018
+  - value: 0.004
+  - value: -0.021
+  - value: 0.008
+  - value: -0.002
+  - value: -0.0
+  - value: 0.014
+  - value: 0.003
+  - value: 0.0
+  - value: -0.003
+  - value: -0.006
+  - value: 0.012
+  - value: 0.013
+  - value: -0.002
+  - value: -0.011
+  - value: 1.0
+  - value: 0.005
+  - value: 0.007
+  - value: -0.394
+  - value: 0.017
+  - value: 0.011
+  - value: 0.006
+  - value: 0.002
+  - value: -0.053
+  - value: 0.013
+  - value: -0.033
+  - value: -0.014
+  - value: 0.047
+  - value: 0.001
+  - value: -0.017
+  - value: -0.016
+  - value: 0.007
+  - value: -0.003
+  - value: -0.003
+  - value: 0.007
+  - value: -0.009
+  - value: -0.01
+  - value: -0.014
+  - value: 0.02
+  - value: 0.007
+  - value: 0.02
+  - value: 0.002
+  - value: 0.005
+  - value: 1.0
+  - value: -0.003
+  - value: 0.007
+  - value: -0.245
+  - value: -0.002
+  - value: 0.005
+  - value: -0.001
+  - value: -0.023
+  - value: -0.025
+  - value: -0.033
+  - value: -0.042
+  - value: 0.046
+  - value: 0.004
+  - value: 0.003
+  - value: -0.006
+  - value: -0.003
+  - value: -0.001
+  - value: -0.002
+  - value: -0.006
+  - value: -0.0
+  - value: -0.01
+  - value: -0.015
+  - value: 0.02
+  - value: -0.021
+  - value: -0.006
+  - value: -0.337
+  - value: 0.007
+  - value: -0.003
+  - value: 1.0
+  - value: -0.001
+  - value: 0.024
+  - value: 0.017
+  - value: 0.009
+  - value: 0.004
+  - value: -0.002
+  - value: -0.038
+  - value: 0.01
+  - value: -0.0
+  - value: -0.085
+  - value: 0.0
+  - value: -0.006
+  - value: 0.001
+  - value: 0.006
+  - value: 0.001
+  - value: -0.032
+  - value: 0.012
+  - value: 0.016
+  - value: 0.018
+  - value: 0.022
+  - value: -0.026
+  - value: 0.005
+  - value: 0.004
+  - value: 0.02
+  - value: -0.394
+  - value: 0.007
+  - value: -0.001
+  - value: 1.0
+  - value: 0.004
+  - value: 0.025
+  - value: 0.016
+  - value: 0.007
+  - value: 0.009
+  - value: -0.055
+  - value: 0.013
+  - value: 0.009
+  - value: -0.182
+  - value: 0.001
+  - value: 0.002
+  - value: 0.001
+  - value: 0.009
+  - value: 0.003
+  - value: 0.011
+  - value: -0.018
+  - value: 0.028
+  - value: 0.03
+  - value: 0.038
+  - value: -0.043
+  - value: 0.005
+  - value: 0.008
+  - value: 0.004
+  - value: 0.017
+  - value: -0.245
+  - value: 0.024
+  - value: 0.004
+  - value: 1.0
+  - value: 0.022
+  - value: 0.025
+  - value: 0.015
+  - value: 0.016
+  - value: -0.085
+  - value: 0.016
+  - value: -0.023
+  - value: -0.307
+  - value: 0.004
+  - value: 0.007
+  - value: -0.004
+  - value: 0.015
+  - value: 0.002
+  - value: 0.009
+  - value: 0.021
+  - value: -0.005
+  - value: 0.039
+  - value: 0.054
+  - value: -0.063
+  - value: 0.008
+  - value: 0.02
+  - value: 0.004
+  - value: 0.011
+  - value: -0.002
+  - value: 0.017
+  - value: 0.025
+  - value: 0.022
+  - value: 1.0
+  - value: 0.017
+  - value: 0.023
+  - value: 0.006
+  - value: -0.032
+  - value: 0.005
+  - value: 0.003
+  - value: -0.17
+  - value: -0.33
+  - value: 0.007
+  - value: 0.006
+  - value: 0.014
+  - value: 0.004
+  - value: 0.011
+  - value: 0.019
+  - value: 0.033
+  - value: -0.0
+  - value: 0.055
+  - value: -0.064
+  - value: 0.004
+  - value: 0.009
+  - value: 0.001
+  - value: 0.006
+  - value: 0.005
+  - value: 0.009
+  - value: 0.016
+  - value: 0.025
+  - value: 0.017
+  - value: 1.0
+  - value: -0.019
+  - value: -0.0
+  - value: 0.005
+  - value: 0.002
+  - value: 0.001
+  - value: -0.088
+  - value: -0.073
+  - value: 0.006
+  - value: 0.009
+  - value: 0.009
+  - value: 0.004
+  - value: 0.01
+  - value: 0.017
+  - value: 0.03
+  - value: 0.043
+  - value: -0.011
+  - value: -0.062
+  - value: 0.002
+  - value: 0.004
+  - value: 0.001
+  - value: 0.002
+  - value: -0.001
+  - value: 0.004
+  - value: 0.007
+  - value: 0.015
+  - value: 0.023
+  - value: -0.019
+  - value: 1.0
+  - value: -0.003
+  - value: 0.021
+  - value: 0.001
+  - value: 0.002
+  - value: 0.006
+  - value: -0.027
+  - value: 0.007
+  - value: 0.013
+  - value: 0.015
+  - value: 0.003
+  - value: 0.013
+  - value: 0.026
+  - value: 0.046
+  - value: 0.064
+  - value: 0.032
+  - value: -0.104
+  - value: 0.003
+  - value: 0.007
+  - value: -0.01
+  - value: -0.053
+  - value: -0.023
+  - value: -0.002
+  - value: 0.009
+  - value: 0.016
+  - value: 0.006
+  - value: -0.0
+  - value: -0.003
+  - value: 1.0
+  - value: -0.48
+  - value: -0.133
+  - value: 0.052
+  - value: -0.001
+  - value: 0.006
+  - value: -0.002
+  - value: -0.001
+  - value: -0.003
+  - value: 0.002
+  - value: 0.001
+  - value: 0.001
+  - value: 0.001
+  - value: -0.012
+  - value: -0.017
+  - value: 0.024
+  - value: 0.003
+  - value: 0.004
+  - value: 0.007
+  - value: 0.013
+  - value: -0.025
+  - value: -0.038
+  - value: -0.055
+  - value: -0.085
+  - value: -0.032
+  - value: 0.005
+  - value: 0.021
+  - value: -0.48
+  - value: 1.0
+  - value: 0.094
+  - value: -0.172
+  - value: 0.047
+  - value: -0.008
+  - value: 0.007
+  - value: 0.008
+  - value: 0.017
+  - value: 0.001
+  - value: 0.01
+  - value: 0.018
+  - value: 0.023
+  - value: 0.055
+  - value: 0.076
+  - value: -0.092
+  - value: 0.005
+  - value: 0.008
+  - value: -0.004
+  - value: -0.033
+  - value: -0.033
+  - value: 0.01
+  - value: 0.013
+  - value: 0.016
+  - value: 0.005
+  - value: 0.002
+  - value: 0.001
+  - value: -0.133
+  - value: 0.094
+  - value: 1.0
+  - value: -0.507
+  - value: -0.002
+  - value: 0.002
+  - value: 0.0
+  - value: 0.002
+  - value: -0.0
+  - value: 0.001
+  - value: 0.001
+  - value: 0.004
+  - value: 0.001
+  - value: -0.001
+  - value: -0.002
+  - value: 0.006
+  - value: 0.002
+  - value: -0.005
+  - value: 0.015
+  - value: -0.014
+  - value: -0.042
+  - value: -0.0
+  - value: 0.009
+  - value: -0.023
+  - value: 0.003
+  - value: 0.001
+  - value: 0.002
+  - value: 0.052
+  - value: -0.172
+  - value: -0.507
+  - value: 1.0
+  - value: 0.011
+  - value: -0.008
+  - value: 0.002
+  - value: -0.003
+  - value: 0.003
+  - value: -0.003
+  - value: 0.006
+  - value: 0.008
+  - value: 0.012
+  - value: 0.012
+  - value: 0.015
+  - value: -0.015
+  - value: 0.004
+  - value: 0.005
+  - value: 0.018
+  - value: 0.047
+  - value: 0.046
+  - value: -0.085
+  - value: -0.182
+  - value: -0.307
+  - value: -0.17
+  - value: -0.088
+  - value: 0.006
+  - value: -0.001
+  - value: 0.047
+  - value: -0.002
+  - value: 0.011
+  - value: 1.0
+  - value: 0.052
+  - value: 0.008
+  - value: 0.012
+  - value: 0.022
+  - value: 0.004
+  - value: 0.019
+  - value: 0.024
+  - value: 0.048
+  - value: 0.064
+  - value: 0.088
+  - value: -0.115
+  - value: 0.003
+  - value: 0.001
+  - value: 0.004
+  - value: 0.001
+  - value: 0.004
+  - value: 0.0
+  - value: 0.001
+  - value: 0.004
+  - value: -0.33
+  - value: -0.073
+  - value: -0.027
+  - value: 0.006
+  - value: -0.008
+  - value: 0.002
+  - value: -0.008
+  - value: 0.052
+  - value: 1.0
+  - value: 0.001
+  - value: 0.002
+  - value: 0.002
+  - value: -0.001
+  - value: 0.004
+  - value: 0.006
+  - value: 0.008
+  - value: 0.015
+  - value: 0.012
+  - value: -0.011
+  - value: 0.003
+  - value: 0.006
+  - value: -0.021
+  - value: -0.017
+  - value: 0.003
+  - value: -0.006
+  - value: 0.002
+  - value: 0.007
+  - value: 0.007
+  - value: 0.006
+  - value: 0.007
+  - value: -0.002
+  - value: 0.007
+  - value: 0.0
+  - value: 0.002
+  - value: 0.008
+  - value: 0.001
+  - value: 1.0
+  - value: -0.286
+  - value: 0.068
+  - value: -0.012
+  - value: 0.0
+  - value: 0.011
+  - value: 0.031
+  - value: 0.039
+  - value: 0.048
+  - value: -0.069
+  - value: 0.002
+  - value: 0.004
+  - value: 0.008
+  - value: -0.016
+  - value: -0.006
+  - value: 0.001
+  - value: 0.001
+  - value: -0.004
+  - value: 0.006
+  - value: 0.009
+  - value: 0.013
+  - value: -0.001
+  - value: 0.008
+  - value: 0.002
+  - value: -0.003
+  - value: 0.012
+  - value: 0.002
+  - value: -0.286
+  - value: 1.0
+  - value: -0.222
+  - value: -0.104
+  - value: 0.012
+  - value: 0.015
+  - value: 0.028
+  - value: 0.05
+  - value: 0.072
+  - value: -0.09
+  - value: 0.002
+  - value: 0.005
+  - value: -0.002
+  - value: 0.007
+  - value: -0.003
+  - value: 0.006
+  - value: 0.009
+  - value: 0.015
+  - value: 0.014
+  - value: 0.009
+  - value: 0.015
+  - value: -0.003
+  - value: 0.017
+  - value: -0.0
+  - value: 0.003
+  - value: 0.022
+  - value: 0.002
+  - value: 0.068
+  - value: -0.222
+  - value: 1.0
+  - value: -0.136
+  - value: 0.025
+  - value: 0.045
+  - value: 0.075
+  - value: 0.098
+  - value: 0.111
+  - value: -0.183
+  - value: 0.004
+  - value: 0.007
+  - value: -0.0
+  - value: -0.003
+  - value: -0.001
+  - value: 0.001
+  - value: 0.003
+  - value: 0.002
+  - value: 0.004
+  - value: 0.004
+  - value: 0.003
+  - value: 0.002
+  - value: 0.001
+  - value: 0.001
+  - value: -0.003
+  - value: 0.004
+  - value: -0.001
+  - value: -0.012
+  - value: -0.104
+  - value: -0.136
+  - value: 1.0
+  - value: 0.003
+  - value: 0.006
+  - value: 0.011
+  - value: 0.012
+  - value: 0.016
+  - value: -0.028
+  - value: 0.004
+  - value: 0.004
+  - value: 0.014
+  - value: -0.003
+  - value: -0.002
+  - value: -0.032
+  - value: 0.011
+  - value: 0.009
+  - value: 0.011
+  - value: 0.01
+  - value: 0.013
+  - value: 0.001
+  - value: 0.01
+  - value: 0.001
+  - value: 0.006
+  - value: 0.019
+  - value: 0.004
+  - value: 0.0
+  - value: 0.012
+  - value: 0.025
+  - value: 0.003
+  - value: 1.0
+  - value: 0.006
+  - value: 0.063
+  - value: 0.084
+  - value: 0.108
+  - value: -0.136
+  - value: 0.004
+  - value: 0.003
+  - value: 0.003
+  - value: 0.007
+  - value: -0.006
+  - value: 0.012
+  - value: -0.018
+  - value: 0.021
+  - value: 0.019
+  - value: 0.017
+  - value: 0.026
+  - value: 0.001
+  - value: 0.018
+  - value: 0.004
+  - value: 0.008
+  - value: 0.024
+  - value: 0.006
+  - value: 0.011
+  - value: 0.015
+  - value: 0.045
+  - value: 0.006
+  - value: 0.006
+  - value: 1.0
+  - value: 0.082
+  - value: 0.144
+  - value: 0.19
+  - value: -0.24
+  - value: 0.004
+  - value: 0.004
+  - value: 0.0
+  - value: -0.009
+  - value: -0.0
+  - value: 0.016
+  - value: 0.028
+  - value: -0.005
+  - value: 0.033
+  - value: 0.03
+  - value: 0.046
+  - value: 0.001
+  - value: 0.023
+  - value: 0.001
+  - value: 0.012
+  - value: 0.048
+  - value: 0.008
+  - value: 0.031
+  - value: 0.028
+  - value: 0.075
+  - value: 0.011
+  - value: 0.063
+  - value: 0.082
+  - value: 1.0
+  - value: 0.233
+  - value: 0.344
+  - value: -0.438
+  - value: 0.002
+  - value: 0.004
+  - value: -0.003
+  - value: -0.01
+  - value: -0.01
+  - value: 0.018
+  - value: 0.03
+  - value: 0.039
+  - value: -0.0
+  - value: 0.043
+  - value: 0.064
+  - value: -0.012
+  - value: 0.055
+  - value: -0.001
+  - value: 0.012
+  - value: 0.064
+  - value: 0.015
+  - value: 0.039
+  - value: 0.05
+  - value: 0.098
+  - value: 0.012
+  - value: 0.084
+  - value: 0.144
+  - value: 0.233
+  - value: 1.0
+  - value: 0.43
+  - value: -0.583
+  - value: 0.001
+  - value: 0.002
+  - value: -0.006
+  - value: -0.014
+  - value: -0.015
+  - value: 0.022
+  - value: 0.038
+  - value: 0.054
+  - value: 0.055
+  - value: -0.011
+  - value: 0.032
+  - value: -0.017
+  - value: 0.076
+  - value: -0.002
+  - value: 0.015
+  - value: 0.088
+  - value: 0.012
+  - value: 0.048
+  - value: 0.072
+  - value: 0.111
+  - value: 0.016
+  - value: 0.108
+  - value: 0.19
+  - value: 0.344
+  - value: 0.43
+  - value: 1.0
+  - value: -0.778
+  - value: 0.001
+  - value: -0.0
+  - value: 0.012
+  - value: 0.02
+  - value: 0.02
+  - value: -0.026
+  - value: -0.043
+  - value: -0.063
+  - value: -0.064
+  - value: -0.062
+  - value: -0.104
+  - value: 0.024
+  - value: -0.092
+  - value: 0.006
+  - value: -0.015
+  - value: -0.115
+  - value: -0.011
+  - value: -0.069
+  - value: -0.09
+  - value: -0.183
+  - value: -0.028
+  - value: -0.136
+  - value: -0.24
+  - value: -0.438
+  - value: -0.583
+  - value: -0.778
+  - value: 1.0
+independent_variables:
+- header:
+    name: STXS region (x)
+  values:
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: qqH VH-like
+  - value: qqH VH-like
+  - value: qqH VH-like
+  - value: qqH VH-like
+  - value: qqH VH-like
+  - value: qqH VH-like
+  - value: qqH VH-like
+  - value: qqH VH-like
+  - value: qqH VH-like
+  - value: qqH VH-like
+  - value: qqH VH-like
+  - value: qqH VH-like
+  - value: qqH VH-like
+  - value: qqH VH-like
+  - value: qqH VH-like
+  - value: qqH VH-like
+  - value: qqH VH-like
+  - value: qqH VH-like
+  - value: qqH VH-like
+  - value: qqH VH-like
+  - value: qqH VH-like
+  - value: qqH VH-like
+  - value: qqH VH-like
+  - value: qqH VH-like
+  - value: qqH VH-like
+  - value: qqH VH-like
+  - value: qqH VH-like
+  - value: qqH BSM
+  - value: qqH BSM
+  - value: qqH BSM
+  - value: qqH BSM
+  - value: qqH BSM
+  - value: qqH BSM
+  - value: qqH BSM
+  - value: qqH BSM
+  - value: qqH BSM
+  - value: qqH BSM
+  - value: qqH BSM
+  - value: qqH BSM
+  - value: qqH BSM
+  - value: qqH BSM
+  - value: qqH BSM
+  - value: qqH BSM
+  - value: qqH BSM
+  - value: qqH BSM
+  - value: qqH BSM
+  - value: qqH BSM
+  - value: qqH BSM
+  - value: qqH BSM
+  - value: qqH BSM
+  - value: qqH BSM
+  - value: qqH BSM
+  - value: qqH BSM
+  - value: qqH BSM
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: ZH lep
+  - value: ZH lep
+  - value: ZH lep
+  - value: ZH lep
+  - value: ZH lep
+  - value: ZH lep
+  - value: ZH lep
+  - value: ZH lep
+  - value: ZH lep
+  - value: ZH lep
+  - value: ZH lep
+  - value: ZH lep
+  - value: ZH lep
+  - value: ZH lep
+  - value: ZH lep
+  - value: ZH lep
+  - value: ZH lep
+  - value: ZH lep
+  - value: ZH lep
+  - value: ZH lep
+  - value: ZH lep
+  - value: ZH lep
+  - value: ZH lep
+  - value: ZH lep
+  - value: ZH lep
+  - value: ZH lep
+  - value: ZH lep
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: tH
+  - value: tH
+  - value: tH
+  - value: tH
+  - value: tH
+  - value: tH
+  - value: tH
+  - value: tH
+  - value: tH
+  - value: tH
+  - value: tH
+  - value: tH
+  - value: tH
+  - value: tH
+  - value: tH
+  - value: tH
+  - value: tH
+  - value: tH
+  - value: tH
+  - value: tH
+  - value: tH
+  - value: tH
+  - value: tH
+  - value: tH
+  - value: tH
+  - value: tH
+  - value: tH
+- header:
+    name: STXS region (y)
+  values:
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: qqH VH-like
+  - value: qqH BSM
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: ZH lep
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: tH
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: qqH VH-like
+  - value: qqH BSM
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: ZH lep
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: tH
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: qqH VH-like
+  - value: qqH BSM
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: ZH lep
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: tH
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: qqH VH-like
+  - value: qqH BSM
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: ZH lep
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: tH
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: qqH VH-like
+  - value: qqH BSM
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: ZH lep
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: tH
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: qqH VH-like
+  - value: qqH BSM
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: ZH lep
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: tH
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: qqH VH-like
+  - value: qqH BSM
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: ZH lep
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: tH
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: qqH VH-like
+  - value: qqH BSM
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: ZH lep
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: tH
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: qqH VH-like
+  - value: qqH BSM
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: ZH lep
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: tH
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: qqH VH-like
+  - value: qqH BSM
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: ZH lep
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: tH
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: qqH VH-like
+  - value: qqH BSM
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: ZH lep
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: tH
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: qqH VH-like
+  - value: qqH BSM
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: ZH lep
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: tH
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: qqH VH-like
+  - value: qqH BSM
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: ZH lep
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: tH
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: qqH VH-like
+  - value: qqH BSM
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: ZH lep
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: tH
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: qqH VH-like
+  - value: qqH BSM
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: ZH lep
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: tH
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: qqH VH-like
+  - value: qqH BSM
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: ZH lep
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: tH
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: qqH VH-like
+  - value: qqH BSM
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: ZH lep
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: tH
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: qqH VH-like
+  - value: qqH BSM
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: ZH lep
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: tH
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: qqH VH-like
+  - value: qqH BSM
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: ZH lep
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: tH
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: qqH VH-like
+  - value: qqH BSM
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: ZH lep
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: tH
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: qqH VH-like
+  - value: qqH BSM
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: ZH lep
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: tH
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: qqH VH-like
+  - value: qqH BSM
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: ZH lep
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: tH
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: qqH VH-like
+  - value: qqH BSM
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: ZH lep
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: tH
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: qqH VH-like
+  - value: qqH BSM
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: ZH lep
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: tH
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: qqH VH-like
+  - value: qqH BSM
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: ZH lep
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: tH
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: qqH VH-like
+  - value: qqH BSM
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: ZH lep
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: tH
+  - value: ggH 0J low $p_{T}^{H}$
+  - value: ggH 0J high $p_{T}^{H}$
+  - value: ggH 1J low $p_{T}^{H}$
+  - value: ggH 1J med $p_{T}^{H}$
+  - value: ggH 1J high $p_{T}^{H}$
+  - value: ggH $\geq2$J low $p_{T}^{H}$
+  - value: ggH $\geq2$J med $p_{T}^{H}$
+  - value: ggH $\geq2$J high $p_{T}^{H}$
+  - value: ggH BSM $200<p_{T}^{H}<300$
+  - value: ggH BSM $300<p_{T}^{H}<450$
+  - value: ggH BSM $p_{T}^{H}>450$
+  - value: VBF-like low $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like low $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ low $p_{T}^{Hjj}$
+  - value: VBF-like high $m_{jj}$ high $p_{T}^{Hjj}$
+  - value: qqH VH-like
+  - value: qqH BSM
+  - value: WH lep $p_{T}^{V}<75$
+  - value: WH lep $75<p_{T}^{V}<150$
+  - value: WH lep $p_{T}^{V}>150$
+  - value: ZH lep
+  - value: ttH $p_{T}^{H}<60$
+  - value: ttH $60<p_{T}^{H}<120$
+  - value: ttH $120<p_{T}^{H}<200$
+  - value: ttH $200<p_{T}^{H}<300$
+  - value: ttH $p_{T}^{H}>300$
+  - value: tH
