@@ -38,6 +38,8 @@ scram b -j4
 cd ../../
 ```
 
+**NB: this software setup step is not required to run the fit, only for plotting the results. However a recent ROOT installation should be available.**
+
 ## Workflow
 
 Currently, the full workflow of importing the analysis fit results and covariances matrices, constructing the likelihood model, and performing the likelihood scans is handled by one script: `testFit.py`. The script has comments throughout that explain each step. It reads the hepData input from the `hepdata_inputs` directory, and the EFT2Obs json output from the `eft2obs_inputs` directory.
