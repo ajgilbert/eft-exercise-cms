@@ -5,6 +5,7 @@ import ROOT
 from array import array
 from math import sqrt
 
+ROOT.RooMsgService.instance().getStream(1).removeTopic(ROOT.RooFit.ObjectHandling)
 
 def ReadIndependent(entry, col=0):
     # Extract the bin labels / bin ranges from the hepData YAML
@@ -307,6 +308,9 @@ scan_ranges = {
 
 POIs = list()
 
+# List bin labels that we do not want to introduce an EFT parameterisation for
+skip_bins = []
+
 # Loop through channels in the combination, then loop through the EFT2Obs
 # scaling data for each one
 for X in combine_channels:
@@ -326,6 +330,10 @@ for X in combine_channels:
                 # Insert the RooRealVar into the worksapce
                 w.factory('%s[0,%g,%g]' % (par, range_lo, range_hi))
         for ib, binterms in enumerate(sc["bins"]):
+            bin_label = sc['bin_labels'][ib]
+            if bin_label in skip_bins:
+                print('Skipping EFT parameterisation for bin %s' % bin_label)
+                continue
             # Now loop through bins in the EFT2Obs data, construct a list of terms of the form:
             # 1 + sum(A_i*c_i) + sum(B_ij*c_i*c_j)
             # We will use the RooFit factory syntax for constructing a RooAddition as a sum of 
@@ -344,7 +352,7 @@ for X in combine_channels:
                 else:
                     expr_parts.append('%g*%s' % (val, vars[0]))
                 # print(val, vars)
-            cmd = 'sum::%s(%s)' % (sc['bin_labels'][ib], ','.join(expr_parts))
+            cmd = 'sum::%s(%s)' % (bin_label, ','.join(expr_parts))
             # print(cmd)
             func = w.factory(cmd)
             # func.Print()
