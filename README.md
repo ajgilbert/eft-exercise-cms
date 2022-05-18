@@ -18,7 +18,7 @@ Useful links:
 Clone this repository somewhere:
 
 ```sh
-git clone https://:@gitlab.cern.ch:8443/agilbert/eft-exercise.git
+git clone https://github.com/ajgilbert/eft-exercise-cms.git
 ```
 
 The EFT2Obs repository is included as a submodule. It is not necessary to initialise this to just run the fits, but if you would also like to also test generating the EFT parameterisations, you should run `git submodule update --init`, then follow the EFT2Obs setup instructions [here](https://github.com/ajgilbert/EFT2Obs#initial-setup).
@@ -37,6 +37,8 @@ git clone https://github.com/cms-analysis/CombineHarvester.git CombineHarvester
 scram b -j4
 cd ../../
 ```
+
+**NB: this software setup step is not required to run the fit, only for plotting the results. However a recent ROOT installation should be available.**
 
 ## Workflow
 
