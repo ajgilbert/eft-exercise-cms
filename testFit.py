@@ -4,6 +4,10 @@ import numpy as np
 import ROOT
 from array import array
 from math import sqrt
+import sys
+
+sys.path.append('EFT2Obs/scripts')
+from eftscaling import EFTScaling
 
 ROOT.RooMsgService.instance().getStream(1).removeTopic(ROOT.RooFit.ObjectHandling)
 
@@ -123,8 +127,7 @@ def ReadHgg():
             cov[i][j] = corr_vals[i * N + j] * bf_unc[i] * bf_unc[j]
     
     # Load the EFT2Obs scaling json
-    with open('eft2obs_inputs/HiggsTemplateCrossSections_HTXS_stage1_2_pTjet30.json') as jsonfile:
-        scaling = json.load(jsonfile)
+    scaling = EFTScaling.fromJSON('eft2obs_inputs/HiggsTemplateCrossSections_HTXS_stage1_2_pTjet30.json')
     return {
         'N': N,
         'labels': labels,
@@ -184,8 +187,7 @@ def ReadWg():
     # Rivet routine gives us three separate 1D histograms - one for each phi bin
     scalings = []
     for file in ['CMS_2021_PAS_SMP_20_005_d54-x01-y01.json', 'CMS_2021_PAS_SMP_20_005_d55-x01-y01.json', 'CMS_2021_PAS_SMP_20_005_d56-x01-y01.json']:
-        with open('eft2obs_inputs/%s' % file) as jsonfile:
-            scalings.append(json.load(jsonfile))
+        scalings.append(EFTScaling.fromJSON('eft2obs_inputs/%s' % file))
 
     return {
         'N': N,
@@ -231,8 +233,7 @@ def ReadSingleT():
             cov[i][j] = cov_vals[i * N + j] / (sm[i] * sm[j])
             cor[i][j] = cov[i][j] / (bf_unc[i] * bf_unc[j])
     
-    with open('eft2obs_inputs/CMS_2019_I1744604_d13-x01-y01.json') as jsonfile:
-        scaling = json.load(jsonfile)
+    scaling = EFTScaling.fromJSON('eft2obs_inputs/CMS_2019_I1744604_d13-x01-y01.json')
     
     return {
         'N': N,
@@ -311,26 +312,27 @@ POIs = list()
 # List bin labels that we do not want to introduce an EFT parameterisation for
 skip_bins = []
 
+
+def makePOI(name, range_dict, wsp, default_range=[-1., 1.]):
+    poi_range = default_range if name not in range_dict else range_dict[name]
+    wsp.factory('%s[0,%g,%g]' % (name, poi_range[0], poi_range[1]))
+
+
+
+
 # Loop through channels in the combination, then loop through the EFT2Obs
 # scaling data for each one
 for X in combine_channels:
     scalings = channel_data[X]['scaling']
     for sc in scalings:
         # Loop through scaling data (most channels only have one, but e.g. Wgamma has it split in three)
-        for par in sc["parameters"]:
+        for par in sc.parameters():
             # Loops through the EFT coefficients defined for this parameterisation
             if par not in POIs:
-                range_lo = -1.
-                range_hi = 1.
-                # Override with our custom ranges above
-                if par in scan_ranges:
-                    range_lo = scan_ranges[par][0]
-                    range_hi = scan_ranges[par][1]
                 POIs.append(par)
-                # Insert the RooRealVar into the worksapce
-                w.factory('%s[0,%g,%g]' % (par, range_lo, range_hi))
-        for ib, binterms in enumerate(sc["bins"]):
-            bin_label = sc['bin_labels'][ib]
+                makePOI(par, scan_ranges, w)
+        for ib in range(sc.nbins):
+            bin_label = sc.bin_labels[ib]
             if bin_label in skip_bins:
                 print('Skipping EFT parameterisation for bin %s' % bin_label)
                 continue
@@ -340,10 +342,10 @@ for X in combine_channels:
             # products. The parser is very fussy, and every term has to be a multiplication between
             # exactly two terms. Hence the "1*1" below.
             expr_parts = ['1*1']
-            for term in binterms:
-                val = term[0]
+            for term in sc.terms:
+                val = term.val[ib]
                 # Will be a list of one or two coeffs
-                vars = term[2:]
+                vars = term.params
                 # If two coeffs (i.e. a quadratic term) we'll define a RooProduct for it:
                 if len(vars) > 1:
                     prodname = '_X_'.join(vars)
