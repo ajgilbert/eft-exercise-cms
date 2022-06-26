@@ -2,3 +2,4 @@ CMSSW*
 *.root
 *.pdf
 *.png
+*.pyc

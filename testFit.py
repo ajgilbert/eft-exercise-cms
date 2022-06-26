@@ -5,247 +5,28 @@ import ROOT
 from array import array
 from math import sqrt
 import sys
+import argparse
+from tools import Measurement
 
 sys.path.append('EFT2Obs/scripts')
 from eftscaling import EFTScaling
 
 ROOT.RooMsgService.instance().getStream(1).removeTopic(ROOT.RooFit.ObjectHandling)
 
-def ReadIndependent(entry, col=0):
-    # Extract the bin labels / bin ranges from the hepData YAML
-    values = entry['independent_variables'][col]['values']
-    if 'value' in values[0]:
-        return [X['value'] for X in values]
-    else:
-        return [(X['low'], X['high']) for X in values]
+parser = argparse.ArgumentParser()
+parser.add_argument('input', nargs='+')
+args = parser.parse_args()
 
 
-def ReadDependent(entry, col=0, error=list(), sym_errors=True):
-    # Extract the central values or the uncertainties from a column in the
-    # hepData YAML. To extract the errors, supply a list of error indicies
-    # that should be summed in quadrature. Errors are then symmeterised by
-    # default.
-    vals = entry['dependent_variables'][col]['values']
-    if len(error) > 0:
-        res = list()
-        for v in vals:
-            sum_hi_sq = 0.
-            sum_lo_sq = 0.
-            for ecol in error:
-                err = v['errors'][ecol]
-                if 'symerror' in err:
-                    sum_hi_sq += pow(err['symerror'], 2)
-                    sum_lo_sq += pow(err['symerror'], 2)
-                elif 'asymerror' in err:
-                    sum_hi_sq += pow(err['asymerror']['plus'], 2)
-                    sum_lo_sq += pow(err['asymerror']['minus'], 2)
-            sum_hi = sqrt(sum_hi_sq)
-            sum_lo = sqrt(sum_lo_sq)
-            if sym_errors:
-                res.append((sum_lo + sum_hi) / 2.)
-            else:
-                res.append((-1. * sum_lo, +1. * sum_hi))
-        return np.array(res)
-    else:
-        return np.array([X['value'] for X in entry['dependent_variables'][col]['values']])
-
-
-def ReadHgg():
-    # Read the HIG-19-015 "minimal merging" STXS results and correlation matrix
-    with open("hepdata_inputs/HEPData-ins1851456-v2-STXS_stage_1.2_minimal_merging_scheme.yaml", "r") as f:
-        vals = yaml.safe_load(f)
-    with open("hepdata_inputs/HEPData-ins1851456-v2-Correlations__STXS_stage_1.2_minimal_merging_scheme.yaml", "r") as f:
-        corr = yaml.safe_load(f)
-
-    # Read the labels from the hepData table. However, for now we'll override these manually
-    # with labels that correspond to the bin naming in the STXS Rivet ouput from EFT2Obs.
-    labels = ReadIndependent(vals, col=0)
-    # Some labels combine multiple STXS bins, that are merged in the analysis. These are given
-    # as comments below.
-    new_labels = [
-        "GG2H_0J_PTH_0_10",
-        "GG2H_0J_PTH_GT10",
-        "GG2H_1J_PTH_0_60",
-        "GG2H_1J_PTH_60_120",
-        "GG2H_1J_PTH_120_200",
-        "GG2H_GE2J_MJJ_0_350_PTH_0_60",
-        "GG2H_GE2J_MJJ_0_350_PTH_60_120",
-        "GG2H_GE2J_MJJ_0_350_PTH_120_200",
-        "GG2H_PTH_200_300",
-        "GG2H_PTH_300_450",
-        "GG2H_PTH_GT450", # "GG2H_PTH_450_650", "GG2H_PTH_GT650",
-        "QQ2HQQ_GE2J_MJJ_350_700_PTH_0_200_PTHJJ_0_25", # + "GG2H_GE2J_MJJ_350_700_PTH_0_200_PTHJJ_0_25",
-        "QQ2HQQ_GE2J_MJJ_350_700_PTH_0_200_PTHJJ_GT25", # + "GG2H_GE2J_MJJ_350_700_PTH_0_200_PTHJJ_GT25",
-        "QQ2HQQ_GE2J_MJJ_GT700_PTH_0_200_PTHJJ_0_25", # + "GG2H_GE2J_MJJ_GT700_PTH_0_200_PTHJJ_0_25",
-        "QQ2HQQ_GE2J_MJJ_GT700_PTH_0_200_PTHJJ_GT25", # + "GG2H_GE2J_MJJ_GT700_PTH_0_200_PTHJJ_GT25",
-        "QQ2HQQ_GE2J_MJJ_60_120",
-        "QQ2HQQ_GE2J_MJJ_GT350_PTH_GT200",
-        "QQ2HLNU_PTV_0_75",
-        "QQ2HLNU_PTV_75_150",
-        "QQ2HLNU_PTV_GT150", #"QQ2HLNU_PTV_150_250_0J",    "QQ2HLNU_PTV_150_250_GE1J", "QQ2HLNU_PTV_GT250", 
-        "QQ2HLL", # "QQ2HLL_PTV_0_75", "QQ2HLL_PTV_75_150", "QQ2HLL_PTV_150_250_0J", "QQ2HLL_PTV_150_250_GE1J", "QQ2HLL_PTV_GT250", "GG2HLL_FWDH", "GG2HLL_PTV_0_75", "GG2HLL_PTV_75_150", "GG2HLL_PTV_150_250_0J", "GG2HLL_PTV_150_250_GE1J", "GG2HLL_PTV_GT250",
-        "TTH_PTH_0_60",
-        "TTH_PTH_60_120",
-        "TTH_PTH_120_200",
-        "TTH_PTH_200_300",
-        "TTH_PTH_GT300",
-        "TH"
-    ]
-    N = len(labels)
-
-    # Just check that new_labels is the same length as the labels from the hepData,
-    # before replacing them
-    assert(N == len(new_labels))
-    labels = new_labels
-
-    # Read the SM cross sections from the first column
-    sm = ReadDependent(vals, col=0)
-    # Read the best-fit values and uncertainties from the second column
-    bf = ReadDependent(vals, col=1)
-    # The total errors are already computed
-    bf_unc = ReadDependent(vals, col=1, error=[0], sym_errors=True)
-    assert(N == len(sm) == len(bf) == len(bf_unc))
-
-    # The above values are absolute cross sections, it's easiest for us to deal
-    # with everything relative to the SM values:
-    bf = bf / sm
-    bf_unc = bf_unc / sm
-
-    # Read the correlation matrix
-    corr_vals = ReadDependent(corr, col=0)
-    assert((N * N) == len(corr_vals))
-
-    cor = ROOT.TMatrixDSym(N)
-    cov = ROOT.TMatrixDSym(N)
-
-    # This part is analysis dependent - have to know the (i,j) index ordering
-    # in the 1D array of values
+def CovTMatrix(cov):
+    shape = np.shape(cov)
+    assert(shape[0] == shape[1])
+    N = shape[0]
+    res = ROOT.TMatrixDSym(N)
     for i in range(N):
         for j in range(N):
-            cor[i][j] = corr_vals[i * N + j]
-            # compute the covariance
-            cov[i][j] = corr_vals[i * N + j] * bf_unc[i] * bf_unc[j]
-    
-    # Load the EFT2Obs scaling json
-    scaling = EFTScaling.fromJSON('eft2obs_inputs/HiggsTemplateCrossSections_HTXS_stage1_2_pTjet30.json')
-    return {
-        'N': N,
-        'labels': labels,
-        'sm': sm,
-        'bf': bf,
-        'bf_unc': bf_unc,
-        'cor': cor,
-        'cov': cov,
-        'scaling': [scaling]
-    }
-
-
-def ReadWg():
-    # Read the SMP-20-005 pTgamma x |phi_f| cross section
-
-    # The unrolling of the 2D is phi first, then pT. To match up with the cov.
-    # matrix it will be easiest to covert to pT,phi unrolled instead.
-    def Reshape(arr):
-        # BAD: we hardcode "3" as the number of phi bins
-        return arr.reshape((3, int(len(arr) / 3))).T.reshape((-1))
-
-    with open("hepdata_inputs/HEPData-ins1978840-v1-p_{mathrm{T}}^{gamma}_times_|phi_{f}|_cross_section.yaml", "r") as f:
-        vals = yaml.safe_load(f)
-    with open("hepdata_inputs/HEPData-ins1978840-v1-p_{mathrm{T}}^{gamma}_times_|phi_{f}|_correlations.yaml", "r") as f:
-        corr = yaml.safe_load(f)
-
-    labels_i = ReadIndependent(vals, col=1)
-    labels = list()
-    N = len(labels_i)
-    for i in range(int(N / 3)):
-        for j in range(3):
-            labels.append('WG_pt_%i_phi_%i' % (i, j))
-    sm = Reshape(ReadDependent(vals, col=1))
-    bf = Reshape(ReadDependent(vals, col=0))
-    bf_unc = Reshape(ReadDependent(vals, col=0, error=[0, 1], sym_errors=True))
-    assert(N == len(sm) == len(bf) == len(bf_unc))
-
-    bf = bf / sm
-    bf_unc = bf_unc / sm
-
-    corr_vals = ReadDependent(corr, col=0)
-
-    cor = ROOT.TMatrixDSym(N)
-    cov = ROOT.TMatrixDSym(N)
-
-    # Ordering of terms in the 1D correlation array is non-intuitive,
-    # compared to Hgg  above, hence the complicated index logic:
-    idx = 0
-    for i in range(N):
-        for j in range(N - i):
-            cor[i][N - j - 1] = corr_vals[idx]
-            cor[N - j - 1][i] = cor[i][N - j - 1] 
-            cov[i][N - j - 1] = corr_vals[idx] * bf_unc[i] * bf_unc[N - j - 1]
-            cov[N - j - 1][i] = cov[i][N - j - 1]
-            idx += 1
-
-    # Rivet routine gives us three separate 1D histograms - one for each phi bin
-    scalings = []
-    for file in ['CMS_2021_PAS_SMP_20_005_d54-x01-y01.json', 'CMS_2021_PAS_SMP_20_005_d55-x01-y01.json', 'CMS_2021_PAS_SMP_20_005_d56-x01-y01.json']:
-        scalings.append(EFTScaling.fromJSON('eft2obs_inputs/%s' % file))
-
-    return {
-        'N': N,
-        'labels': labels,
-        'sm': sm,
-        'bf': bf,
-        'bf_unc': bf_unc,
-        'cor': cor,
-        'cov': cov,
-        'scaling': scalings
-    }
-
-
-def ReadSingleT():
-    with open("hepdata_inputs/HEPData-ins1744604-v1-Table_1.yaml", "r") as f:
-        vals = yaml.safe_load(f)
-    with open("hepdata_inputs/HEPData-ins1744604-v1-Table_2.yaml", "r") as f:
-        corr = yaml.safe_load(f)
-
-    labels = ReadIndependent(vals, col=0)
-    labels = ['pt_t_bin_%i' % X for X in range(len(labels))]
-    N = len(labels)
-    bf = ReadDependent(vals, col=0)
-    # TODO: Not able to find numerical values of MC predictions
-    # Here I just eyeballed the powheg 4F ratio:
-    sm = np.array(bf) * np.array([1.25, 1.09, 0.96, 1.06, 1.33])
-    bf_unc = ReadDependent(vals, col=0, error=[-1], sym_errors=True)
-    assert(N == len(sm) == len(bf) == len(bf_unc))
-
-    bf = bf / sm
-    bf_unc = bf_unc / sm
-
-    cov_vals = ReadDependent(corr, col=0)
-    assert((N * N) == len(cov_vals))
-
-    cor = ROOT.TMatrixDSym(N)
-    cov = ROOT.TMatrixDSym(N)
-
-    for i in range(N):
-        for j in range(N):
-            # Here we are given the covariance of the differential cross section
-            # directly - so we need to convert to ratio wrt. SM
-            cov[i][j] = cov_vals[i * N + j] / (sm[i] * sm[j])
-            cor[i][j] = cov[i][j] / (bf_unc[i] * bf_unc[j])
-    
-    scaling = EFTScaling.fromJSON('eft2obs_inputs/CMS_2019_I1744604_d13-x01-y01.json')
-    
-    return {
-        'N': N,
-        'labels': labels,
-        'sm': sm,
-        'bf': bf,
-        'bf_unc': bf_unc,
-        'cor': cor,
-        'cov': cov,
-        'scaling': [scaling]
-    }
-
+            res[i][j] = cov[i][j]
+    return res
 
 def MergeCov(covs=list()):
     # Input: list of TMatrixD
@@ -259,24 +40,39 @@ def MergeCov(covs=list()):
     # cov.Print()
     return cov
 
+def ParameterUncerts(matrix):
+    N = matrix.GetNcols()
+    res = []
+    for i in range(N):
+        res.append(sqrt(matrix[i][i]))
+    return res
+
+channel_data = dict()
+
+for channel in args.input:
+    label, measurement_file, param_files = channel.split(':')
+    print('>> Reading measurement {} and parameterisation {}'.format(measurement_file, param_files))
+    measurement = Measurement.fromJSON(measurement_file)
+    params = [EFTScaling.fromJSON(X) for X in param_files.split(',')]
+    channel_data[label] = (measurement, params)
+
+
+
 # Read in the data for each channel
-channel_data = {
-    "hgg": ReadHgg(),
-    "wg": ReadWg(),
-    "singlet": ReadSingleT()
-}
 
 # Combine the following channels
-combine_channels = ["hgg", "singlet", "wg"]
+combine_channels = channel_data.keys()
 
 # Merge the lists of labels, best-fit values, uncertainties and covariance matrices
 labels = list()
 for X in combine_channels:
-    labels.extend(channel_data[X]['labels'])
-bf = np.concatenate([channel_data[X]['bf'] for X in combine_channels])
-bf_unc = np.concatenate([channel_data[X]['bf_unc'] for X in combine_channels])
-cov = MergeCov([channel_data[X]['cov'] for X in combine_channels])
+    labels.extend(channel_data[X][0].bin_labels)
+bf = np.concatenate([channel_data[X][0].bf for X in combine_channels])
+cov = MergeCov([CovTMatrix(channel_data[X][0].cov) for X in combine_channels])
+bf_unc = ParameterUncerts(cov)
+# cov.Print()
 
+# sys.exit(0)
 # Construct the model inside a workspace
 w = ROOT.RooWorkspace()
 
@@ -323,7 +119,7 @@ def makePOI(name, range_dict, wsp, default_range=[-1., 1.]):
 # Loop through channels in the combination, then loop through the EFT2Obs
 # scaling data for each one
 for X in combine_channels:
-    scalings = channel_data[X]['scaling']
+    scalings = channel_data[X][1]
     for sc in scalings:
         # Loop through scaling data (most channels only have one, but e.g. Wgamma has it split in three)
         for par in sc.parameters():
@@ -345,7 +141,8 @@ for X in combine_channels:
             for term in sc.terms:
                 val = term.val[ib]
                 # Will be a list of one or two coeffs
-                vars = term.params
+                vars = list(term.params)
+
                 # If two coeffs (i.e. a quadratic term) we'll define a RooProduct for it:
                 if len(vars) > 1:
                     prodname = '_X_'.join(vars)
