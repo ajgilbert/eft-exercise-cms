@@ -23,22 +23,17 @@ git clone https://github.com/ajgilbert/eft-exercise-cms.git
 
 The EFT2Obs repository is included as a submodule. It is not necessary to initialise this to just run the fits, but if you would also like to also test generating the EFT parameterisations, you should run `git submodule update --init`, then follow the EFT2Obs setup instructions [here](https://github.com/ajgilbert/EFT2Obs#initial-setup).
 
-To get a standard environment and for a few plotting scripts at the end, we will set up a CMSSW area:
+To run the fit, a recent ROOT installation needs to be available. If you do not have one, you can set up a CMSSW area to get a standard environment:
 ```sh
 cd eft-exercise
 export SCRAM_ARCH=slc7_amd64_gcc700
 cmsrel CMSSW_10_2_13
 cd CMSSW_10_2_13/src
 cmsenv
-git clone https://github.com/cms-analysis/HiggsAnalysis-CombinedLimit.git HiggsAnalysis/CombinedLimit
-cd HiggsAnalysis/CombinedLimit
-cd ../../
-git clone https://github.com/cms-analysis/CombineHarvester.git CombineHarvester
-scram b -j4
 cd ../../
 ```
 
-**NB: this software setup step is not required to run the fit, only for plotting the results. However a recent ROOT installation should be available.**
+**NB: this software setup step is not required if you already have a recent ROOT installation.**
 
 ## Workflow
 

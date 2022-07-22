@@ -3,7 +3,7 @@ import ROOT
 # import math
 import json
 import argparse
-import CombineHarvester.CombineTools.plotting as plot
+import python.plotting as plot
 import fnmatch
 
 ROOT.PyConfig.IgnoreCommandLineOptions = True
