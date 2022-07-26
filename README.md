@@ -23,7 +23,7 @@ git clone https://github.com/ajgilbert/eft-exercise-cms.git
 
 The EFT2Obs repository is included as a submodule. It is not necessary to initialise this to just run the fits, but if you would also like to also test generating the EFT parameterisations, you should run `git submodule update --init`, then follow the EFT2Obs setup instructions [here](https://github.com/ajgilbert/EFT2Obs#initial-setup).
 
-To run the fit, a recent ROOT installation needs to be available. If you do not have one, you can set up a CMSSW area to get a standard environment:
+To run the fit, a recent ROOT installation needs to be available. The code has been tested with the environment provided by the following setup:
 ```sh
 cd eft-exercise
 export SCRAM_ARCH=slc7_amd64_gcc700
@@ -33,7 +33,7 @@ cmsenv
 cd ../../
 ```
 
-**NB: this software setup step is not required if you already have a recent ROOT installation.**
+**NB: this software setup step is not always required if you already have a recent ROOT installation, but other environments have been found to lead to errors.**
 
 ## Workflow
 
