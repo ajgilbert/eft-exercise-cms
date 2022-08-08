@@ -123,7 +123,7 @@ python scripts/launch_jobs.py --gridpack gridpack_qqH-SMEFTsim3.tar.gz -j 50 -s 
 
 Merge the output yoda files using `yodamerge -o RivetTotal.yoda Rivet_* --no-veto-empty`.
 
-Produce the scaling term json files:
+Produce the scaling term json files (the `eft_exercise_bin_labels.json` file is located is included in the root of this repository):
 ```sh
 python scripts/get_scaling.py -c config_st_tch_4f-SMEFTsim3.json -i test-st_tch_4f-SMEFTsim3/RivetTotal.yoda --hist "/CMS_2019_I1744604/d13-x01-y01" --bin-labels eft_exercise_bin_labels.json
 
