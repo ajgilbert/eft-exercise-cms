@@ -3,7 +3,7 @@ import sys
 import ROOT
 import math
 from functools import partial
-import CombineHarvester.CombineTools.plotting as plot
+import python.plotting as plot
 import json
 import argparse
 import os.path
