@@ -52,7 +52,12 @@ channel_data = dict()
 for channel in args.input:
     label, measurement_file, param_files = channel.split(':')
     print('>> Reading measurement {} and parameterisation {}'.format(measurement_file, param_files))
-    measurement = Measurement.fromJSON(measurement_file)
+    if measurement_file.split('.')[-1]=='yaml':
+      measurement = Measurement.fromYAML(measurement_file)
+    elif measurement_file.split('.')[-1]=='json':
+      measurement = Measurement.fromJSON(measurement_file)
+    else:
+      print('File format not supported')
     params = [EFTScaling.fromJSON(X) for X in param_files.split(',')]
     channel_data[label] = (measurement, params)
 

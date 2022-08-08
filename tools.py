@@ -1,4 +1,5 @@
 import numpy as np
+import yaml
 import json
 from math import sqrt
 
@@ -18,8 +19,14 @@ class Measurement(object):
         return cls.fromDict(input)
 
     @classmethod
+    def fromYAML(cls, filename):
+        with open(filename) as yamlfile:
+            input = yaml.load(yamlfile)
+        return cls.fromDict(input)
+
+    @classmethod
     def fromDict(cls, d):
-        return cls(nbins=d["nbins"], bin_labels=d["bin_labels"], sm=np.array(d["sm"]), bf=np.array(d["bf"]), cov=np.array(d["cov"]))
+        return cls(nbins=d["nbins"] if "nbins" in d else len(d["bin_labels"]) , bin_labels=d["bin_labels"], sm=np.array(d["sm"]), bf=np.array(d["bf"]), cov=np.array(d["cov"]))
 
     def writeToJSON(self, filename):
         with open(filename, 'w') as outfile:
@@ -31,6 +38,18 @@ class Measurement(object):
                 "cov": self.cov.tolist(),
             }
             outfile.write(json.dumps(res, sort_keys=False, indent=2))
+
+    def writeToYAML(self, filename):
+        with open(filename, 'w') as outfile:
+            res = {
+                "nbins": int(self.nbins),
+                "bin_labels": self.bin_labels,
+                "sm": self.sm.tolist(),
+                "bf": self.bf.tolist(),
+                "cov": self.cov.tolist(),
+            }
+            yaml.dump(res,outfile,default_flow_style=False, allow_unicode=True)
+
 
 
 def ReadIndependent(entry, col=0):

@@ -172,3 +172,4 @@ channel_data = {
 
 for label, data in channel_data.items():
     data.writeToJSON('measurements/{}.json'.format(label))
+    data.writeToYAML('measurements/{}.yaml'.format(label))
