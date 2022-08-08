@@ -1,0 +1,40 @@
+{
+  "/HiggsTemplateCrossSections/HTXS_stage1_2_pTjet30": [
+    "QQ2HQQ_FWDH",
+    "QQ2HQQ_0J",
+    "QQ2HQQ_1J",
+    "QQ2HQQ_GE2J_MJJ_0_60",
+    "QQ2HQQ_GE2J_MJJ_60_120",
+    "QQ2HQQ_GE2J_MJJ_120_350",
+    "QQ2HQQ_GE2J_MJJ_GT350_PTH_GT200",
+    "QQ2HQQ_GE2J_MJJ_350_700_PTH_0_200_PTHJJ_0_25",
+    "QQ2HQQ_GE2J_MJJ_350_700_PTH_0_200_PTHJJ_GT25",
+    "QQ2HQQ_GE2J_MJJ_GT700_PTH_0_200_PTHJJ_0_25",
+    "QQ2HQQ_GE2J_MJJ_GT700_PTH_0_200_PTHJJ_GT25"
+  ],
+  "/CMS_2019_I1744604/d13-x01-y01": [
+    "pt_t_bin_0",
+    "pt_t_bin_1",
+    "pt_t_bin_2",
+    "pt_t_bin_3",
+    "pt_t_bin_4"
+  ],
+  "/CMS_2021_PAS_SMP_20_005/d54-x01-y01": [
+    "WG_pt_0_phi_0",
+    "WG_pt_1_phi_0",
+    "WG_pt_2_phi_0",
+    "WG_pt_3_phi_0"
+  ],
+  "/CMS_2021_PAS_SMP_20_005/d55-x01-y01": [
+    "WG_pt_0_phi_1",
+    "WG_pt_1_phi_1",
+    "WG_pt_2_phi_1",
+    "WG_pt_3_phi_1"
+  ],
+  "/CMS_2021_PAS_SMP_20_005/d56-x01-y01": [
+    "WG_pt_0_phi_2",
+    "WG_pt_1_phi_2",
+    "WG_pt_2_phi_2",
+    "WG_pt_3_phi_2"
+  ]
+}
