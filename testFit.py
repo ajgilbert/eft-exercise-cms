@@ -160,7 +160,7 @@ for X in combine_channels:
             # print(cmd)
             func = w.factory(cmd)
             # func.Print()
-        
+
 
 # xvars/xvec: initially the free parameters for the fid. bins, that 
 #             will then be redefined as functions of the STXS parameters
@@ -227,7 +227,7 @@ for POI in POIs:
     # First set all POIs constant and to the snapshot value
     for POI2 in POIs:
         w.var(POI2).setConstant(True)
-        w.var(POI2).setVal(snapshot[POI])
+        w.var(POI2).setVal(snapshot[POI2])
 
     # The POI we're going to fit:
     param = w.var(POI)
