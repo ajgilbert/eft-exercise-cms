@@ -45,7 +45,8 @@ Currently, the full workflow of importing the analysis fit results and covarianc
 python testFit.py \
   hgg:measurements/CMS_hgg_STXS.json:scalings/HiggsTemplateCrossSections_HTXS_stage1_2_pTjet30.json \
   wg:measurements/CMS_wgamma.json:scalings/CMS_2021_PAS_SMP_20_005_d54-x01-y01.json,scalings/CMS_2021_PAS_SMP_20_005_d55-x01-y01.json,scalings/CMS_2021_PAS_SMP_20_005_d56-x01-y01.json \
-  singlet:measurements/CMS_singlet.json:scalings/CMS_2019_I1744604_d13-x01-y01.json
+  singlet:measurements/CMS_singlet.json:scalings/CMS_2019_I1744604_d13-x01-y01.json \
+  ww:measurements/ATLAS_WW_parsed.yaml:scalings/ATLAS_2019_I1734263_d04-x01-y01.json
 ```
 
 Currently the script will perform a fit and likelihood scan for each EFT coefficient in turn. A simultaneous fit of multiple parameters will generally fail as there are too many degeneracies.
@@ -78,6 +79,7 @@ The cards for each process are in:
 - Wγ: `cards/WG-SMEFTsim3`
 - Hγγ (qqH only): `cards/qqH-SMEFTsim3`
 - single-top: `cards/st_tch_4f-SMEFTsim3`
+- WW: `cards/WW-SMEFTsim3`
 
 Set up each process and create the gridpack following the standard workflow:
 
@@ -122,6 +124,7 @@ Produce the scaling term json files (the `eft_exercise_bin_labels.json` file is 
 ```sh
 python scripts/get_scaling.py -c config_st_tch_4f-SMEFTsim3.json -i test-st_tch_4f-SMEFTsim3/RivetTotal.yoda --hist "/CMS_2019_I1744604/d13-x01-y01" --bin-labels eft_exercise_bin_labels.json
 
+python scripts/get_scaling.py -c config_WW-SMEFTsim3.json -i test-WW-SMEFTsim3/RivetTotal.yoda --hist "/ATLAS_2019_I1734263/d04-x01-y01" --bin-labels eft_exercise_bin_labels.json
 
 python scripts/get_scaling.py -c config_WG-SMEFTsim3.json -i test-WG-SMEFTsim3/RivetTotal.yoda --hist "/CMS_2021_PAS_SMP_20_005/d54-x01-y01" --bin-labels eft_exercise_bin_labels.json
 python scripts/get_scaling.py -c config_WG-SMEFTsim3.json -i test-WG-SMEFTsim3/RivetTotal.yoda --hist "/CMS_2021_PAS_SMP_20_005/d55-x01-y01" --bin-labels eft_exercise_bin_labels.json
