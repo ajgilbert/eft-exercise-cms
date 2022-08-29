@@ -2,6 +2,7 @@ import numpy as np
 import yaml
 import json
 from math import sqrt
+from ROOT import TMatrixDSym
 
 class Measurement(object):
 
@@ -89,3 +90,33 @@ def ReadDependent(entry, col=0, error=list(), sym_errors=True):
         return np.array(res)
     else:
         return np.array([X['value'] for X in entry['dependent_variables'][col]['values']])
+
+
+def CovTMatrix(cov):
+    shape = np.shape(cov)
+    assert(shape[0] == shape[1])
+    N = shape[0]
+    res = TMatrixDSym(N)
+    for i in range(N):
+        for j in range(N):
+            res[i][j] = cov[i][j]
+    return res
+
+def MergeCov(covs=list()):
+    # Input: list of TMatrixD
+    # Output: block-diagonal TMatrixD from combination of inputs
+    Ntot = sum([X.GetNcols() for X in covs])
+    cov = TMatrixDSym(Ntot)
+    pos = 0
+    for c in covs:
+        cov.SetSub(pos, pos, c)
+        pos += c.GetNcols()
+    # cov.Print()
+    return cov
+
+def ParameterUncerts(matrix):
+    N = matrix.GetNcols()
+    res = []
+    for i in range(N):
+        res.append(sqrt(matrix[i][i]))
+    return res
