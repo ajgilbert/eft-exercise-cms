@@ -87,16 +87,20 @@ scan_ranges = {
     "chdd": [-5, 5],
     "chj3": [-1, 1],
     "chl3": [-3, 3],
+    "chl1": [-0.01, 0.01],
     "chwb": [-1, 1],
     "clj3": [-0.4, 0.4],
+    "clj1": [-0.1, 0.1],
     "cll1": [-3, 3],
+    "clu": [-1, 1],
     "cw": [-0.1, 0.1],
     "chg": [-1, 1],
     "chb": [-5, 5],
     "chbox": [-10, 10],
-    "chd": [-5, 5],
-    "chj1": [-5, 5],
-    "chu": [-5, 5],
+    "chd": [-1, 1],
+    "cld": [-0.3, 0.3],
+    "chj1": [-1, 1],
+    "chu": [-0.5, 0.5],
     "chw": [-3, 3],
     "cbgre": [-30, 30],
     "cbwre": [-10, 10],
@@ -214,6 +218,7 @@ minim = ROOT.RooMinimizer(nll)
 minim.setEps(0.01)
 minim.setVerbose(False)
 minim.setPrintLevel(-1)
+
 
 # Keep a snapshot of initial values to be able to reset to
 snapshot = {}

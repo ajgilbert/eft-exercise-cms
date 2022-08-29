@@ -36,5 +36,21 @@
     "WG_pt_1_phi_2",
     "WG_pt_2_phi_2",
     "WG_pt_3_phi_2"
+  ],
+  "/ATLAS_2019_I1734263/d04-x01-y01": [
+    "WW_ptl_bin_0",
+    "WW_ptl_bin_1",
+    "WW_ptl_bin_2",
+    "WW_ptl_bin_3",
+    "WW_ptl_bin_4",
+    "WW_ptl_bin_5",
+    "WW_ptl_bin_6",
+    "WW_ptl_bin_7",
+    "WW_ptl_bin_8",
+    "WW_ptl_bin_9",
+    "WW_ptl_bin_10",
+    "WW_ptl_bin_11",
+    "WW_ptl_bin_12",
+    "WW_ptl_bin_13"
   ]
 }
