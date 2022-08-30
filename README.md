@@ -58,7 +58,7 @@ The script `doPCA.py` imports the analysis fit results and covariance matrices $
 
 $$ V_{EFT}^{-1} = P^T V_{xs}^{-1} P $$
 
-using the linear parameterisation matrix $P$ with rows running over the measurement bins and columns running over the Wilson coefficients ($P_{ij} = A_{c_j}^{\text{bin} i}$). The principal components are the eigenvectors of the Fisher information matrix. The expected uncertainty of a measurement in direction of a principal component is inversely proportional to the square root of its eigenvalue. 
+using the linear parameterisation matrix $P$ with rows running over the measurement bins and columns running over the Wilson coefficients: $P_{ij} = A_{c_j}^{\text{bin} i}$. The principal components are the eigenvectors of the Fisher information matrix. The expected uncertainty of a measurement in direction of a principal component is inversely proportional to the square root of its eigenvalue. 
 
 The output of `doPCA.py` is a json file `principalcomponents.json` containing the eigenvalues and eigenvectors of the Fisher information matrix and the list of Wilson coefficients. With the option `-p`, the script also plots the linear parameterisation matrix, the Fisher matrix, and the principal components:
 
@@ -85,6 +85,12 @@ Now we can make the NLL scan plots for each one. This script will also interpola
 
 ```sh
 for POI in chdd chj3 chl3 chwb clj3 cll1 cw chg chb chbox chd chj1 chu chw cbgre cbwre chq3 chtbre cqj31 cqj38 ctgre ctwre ; do python ./plot1DScan.py -m scan_${POI}.root --POI ${POI} --translate translate_root_SMEFTsim3.json --model eft --output nll_scan_${POI} --json eft_scans.json --no-input-label --chop 10; done
+```
+
+Or when using the principal components:
+
+```sh
+for PC in pc{0..10} ; do python ./plot1DScan.py -m scan_${PC}.root --POI ${PC} --translate translate_root_SMEFTsim3.json --model eft --output nll_scan_${PC} --json eft_scans.json --no-input-label --chop 10; done
 ```
 
 From this JSON file we can make a summary plot of the fit results:
