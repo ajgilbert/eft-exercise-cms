@@ -50,12 +50,47 @@ python testFit.py \
 ```
 
 Currently the script will perform a fit and likelihood scan for each EFT coefficient in turn. A simultaneous fit of multiple parameters will generally fail as there are too many degeneracies.
-This will produce a set of output root files, `nll_scan_[X].root`, one for each parameter of interest.
+This will produce a set of output root files, `scan_[X].root`, one for each parameter of interest.
+
+Alternatively, a principal component analysis (PCA) can be done to determine the combinations of Wilson coefficients that can be constrained simultaneously. Currently, this is only implemented for the linear parameterisation. 
+
+The script `doPCA.py` imports the analysis fit results and covariance matrices $V_{xs}$, and the EFT parameterisations for each measurement bin. Then, the Fisher information matrix $V_{EFT}^{-1}$ is obtained by rotating the Hessian matrix $V_{xs}^{-1}$ to the EFT basis $c_j$
+
+$$ V_{EFT}^{-1} = P^T V_{xs}^{-1} P $$
+
+using the linear parameterisation matrix $P$ with rows running over the measurement bins and columns running over the Wilson coefficients: $P_{ij} = A_{c_j}^{\text{bin} i}$. The principal components are the eigenvectors of the Fisher information matrix. The expected uncertainty of a measurement in direction of a principal component is inversely proportional to the square root of its eigenvalue. 
+
+The output of `doPCA.py` is a json file `principalcomponents.json` containing the eigenvalues and eigenvectors of the Fisher information matrix and the list of Wilson coefficients. With the option `-p`, the script also plots the linear parameterisation matrix, the Fisher matrix, and the principal components:
+
+```sh
+python doPCA.py \
+  hgg:measurements/CMS_hgg_STXS.json:scalings/HiggsTemplateCrossSections_HTXS_stage1_2_pTjet30.json \
+  wg:measurements/CMS_wgamma.json:scalings/CMS_2021_PAS_SMP_20_005_d54-x01-y01.json,scalings/CMS_2021_PAS_SMP_20_005_d55-x01-y01.json,scalings/CMS_2021_PAS_SMP_20_005_d56-x01-y01.json \
+  singlet:measurements/CMS_singlet.json:scalings/CMS_2019_I1744604_d13-x01-y01.json \
+  ww:measurements/ATLAS_WW_parsed.yaml:scalings/ATLAS_2019_I1734263_d04-x01-y01.json \
+  -p
+```
+
+A simultaneous fit of multiple principal components can be done with the script `pcaFit.py`. Like `testFit.py`, this produces a set of output files `scan_pc[X].root`.
+
+```sh
+python testFit.py \
+  hgg:measurements/CMS_hgg_STXS.json:scalings/HiggsTemplateCrossSections_HTXS_stage1_2_pTjet30.json \
+  wg:measurements/CMS_wgamma.json:scalings/CMS_2021_PAS_SMP_20_005_d54-x01-y01.json,scalings/CMS_2021_PAS_SMP_20_005_d55-x01-y01.json,scalings/CMS_2021_PAS_SMP_20_005_d56-x01-y01.json \
+  singlet:measurements/CMS_singlet.json:scalings/CMS_2019_I1744604_d13-x01-y01.json \
+  ww:measurements/ATLAS_WW_parsed.yaml:scalings/ATLAS_2019_I1734263_d04-x01-y01.json
+```
 
 Now we can make the NLL scan plots for each one. This script will also interpolate the 1 sigma intervals and store them in an output JSON file.
 
 ```sh
 for POI in chdd chj3 chl3 chwb clj3 cll1 cw chg chb chbox chd chj1 chu chw cbgre cbwre chq3 chtbre cqj31 cqj38 ctgre ctwre ; do python ./plot1DScan.py -m scan_${POI}.root --POI ${POI} --translate translate_root_SMEFTsim3.json --model eft --output nll_scan_${POI} --json eft_scans.json --no-input-label --chop 10; done
+```
+
+Or when using the principal components:
+
+```sh
+for PC in pc{0..10} ; do python ./plot1DScan.py -m scan_${PC}.root --POI ${PC} --translate translate_root_SMEFTsim3.json --model eft --output nll_scan_${PC} --json eft_scans.json --no-input-label --chop 10; done
 ```
 
 From this JSON file we can make a summary plot of the fit results:
