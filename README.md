@@ -65,7 +65,12 @@ python pca.py \
   --rundir examplerun --output rotmatrix.json
 ```
 
-The Fisher information matrix $V_\text{EFT}^{-1}$, the rotation matrix ($\text{EV}_1$, ..., $\text{EV}_N$), and the eigenvalues $\lambda_k$ are saved in the output json file. 
+The Fisher information matrix $V_\text{EFT}^{-1}$, the rotation matrix $(\text{EV}_1 , ... , \text{EV}_N )$, and the eigenvalues $\lambda_k$ are saved in the output JSON file. Use the script `drawMatrix.py` to visualise the two matrices:
+
+```sh
+python drawMatrix.py --input examplerun/rotmatrix.json:fishermatrix --xlabels xpars --title 'Fisher information matrix'
+python drawMatrix.py --input examplerun/rotmatrix.json:rotationmatrix --xlabels xpars --ylabels ypars --title 'Basis rotation'
+```
 
 
 ### Preparing the workspace
@@ -82,7 +87,7 @@ python workspace.py \
 ```
 
 
-### Fit
+### Fitting
 
 The fit is done with the script `fit.py`:
 
@@ -90,7 +95,7 @@ The fit is done with the script `fit.py`:
 python fit.py --rundir examplerun --input workspace.root --output fitresult.json --scan
 ```
 
-It takes the RooWorkspace with the linearised model (option `--quadratic` or `-q` to use the linear+quadratic model) from the file `workspace.root` in the directory `examplerun`, does a simultaneous fit of all parameters of interest, and saves the best-fit value and uncertainty on each parameter in `fitresult.json`. Parameters with large uncertainty are automatically fixed to zero (uncertainty $>10$ by default, can be changed with the `--max_unc` option). Parameters can be manually fixed to zero using the `--fix` option, e.g. when working in the rotated basis, you could look at the eigenvalues in `rotmatrix.json` and fix all eigenvectors to zero that have $\lambda$ smaller than some threshold with `--fix EV19 EV20 EV21 EV22 EV23 EV24 EV25`.
+It takes the RooWorkspace with the linearised model (option `--quadratic` or `-q` to use the linear+quadratic model) from the file `workspace.root` in the directory `examplerun`, does a simultaneous fit of all parameters of interest, and saves the best-fit value and uncertainty of each parameter, and the correlation matrix in `fitresult.json`. Parameters with large uncertainty are automatically fixed to zero (uncertainty $>10$ by default, can be changed with the `--max_unc` option). Parameters can be manually fixed to zero using the `--fix` option, e.g. when working in the rotated basis, you could look at the eigenvalues in `rotmatrix.json` and fix all eigenvectors to zero that have $\lambda$ smaller than some threshold with `--fix EV19 EV20 EV21 EV22 EV23 EV24 EV25`.
 
 
 ### Parameter Scans
@@ -174,7 +179,7 @@ python scripts/launch_jobs.py --gridpack gridpack_qqH-SMEFTsim3.tar.gz -j 50 -s 
 
 Merge the output yoda files using `yodamerge -o RivetTotal.yoda Rivet_* --no-veto-empty`.
 
-Produce the scaling term json files (the `eft_exercise_bin_labels.json` file is located is included in the root of this repository):
+Produce the scaling term JSON files (the `eft_exercise_bin_labels.json` file is located is included in the root of this repository):
 ```sh
 python scripts/get_scaling.py -c config_st_tch_4f-SMEFTsim3.json -i test-st_tch_4f-SMEFTsim3/RivetTotal.yoda --hist "/CMS_2019_I1744604/d13-x01-y01" --bin-labels eft_exercise_bin_labels.json
 

@@ -159,6 +159,11 @@ if not args.scan_only:
 
     # Repeat fit with reduced number of parameters
     if len(fixzero) > 0:
+        nll = pdf.createNLL(dat)
+        minim = ROOT.RooMinimizer(nll)
+        minim.setEps(0.01)
+        minim.setVerbose(False)
+        minim.setPrintLevel(-1)
         minim.minimize('Minuit2','migrad')
         print('\nThese POIs are fixed to zero because their uncertainty is > %.2f: %s' % 
             (args.max_unc, ', '.join(fixzero)))
