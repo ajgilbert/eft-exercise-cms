@@ -2,7 +2,7 @@ import numpy as np
 import yaml
 import json
 from math import sqrt
-from ROOT import TMatrixDSym
+from ROOT import TMatrixDSym, gROOT, TH2D
 
 class Measurement(object):
 
@@ -119,4 +119,21 @@ def ParameterUncerts(matrix):
     res = []
     for i in range(N):
         res.append(sqrt(matrix[i][i]))
+    return res
+
+def TMatrixToTH2(matr, xlabels=[], ylabels=None, drawDiagonal=False):
+    hist_name, hist_counter = matr.GetName(), 0 # needed to avoid memory leak when calling this function several times
+    while gROOT.FindObjectAny(hist_name+str(hist_counter)): hist_counter+=1
+    
+    Ncol, Mrow = matr.GetNcols(), matr.GetNrows()
+    res = TH2D(matr.GetName()+str(hist_counter), matr.GetTitle(), Ncol, 0, Ncol, Mrow, 0, Mrow)
+
+    if ylabels is None: ylabels=xlabels[:]
+    for i,xlab in enumerate(xlabels): res.GetXaxis().SetBinLabel(i+1, xlab)
+    for j,ylab in enumerate(ylabels): res.GetYaxis().SetBinLabel(Mrow-j, ylab)
+    
+    for icol in range(1, Ncol+1):
+        for jrow in range(1, Mrow+1-(icol-1) if drawDiagonal else Mrow+1):
+            res.SetBinContent(icol, jrow, matr[Mrow-jrow][icol-1])
+    
     return res

@@ -3,6 +3,7 @@ import sys
 import ROOT
 import math
 from functools import partial
+from collections import OrderedDict
 import python.plotting as plot
 import json
 import argparse
@@ -771,7 +772,7 @@ if not args.no_numbers:
 if args.json is not None:
     if os.path.isfile(args.json):
         with open(args.json) as jsonfile:
-            js = json.load(jsonfile)
+            js = json.load(jsonfile, object_pairs_hook=OrderedDict)
     else:
         js = {}
     if not args.model in js:
@@ -838,7 +839,7 @@ if args.json is not None:
         js[args.model][args.POI].update(js_extra)
 
     with open(args.json, 'w') as outfile:
-        json.dump(js, outfile, sort_keys=True, indent=4, separators=(',', ': '))
+        json.dump(js, outfile, indent=4, separators=(',', ': '))
 
 collab = 'Combined'
 if 'cms_' in args.output:
@@ -988,7 +989,7 @@ for i, other in enumerate(other_scans):
 
 outfile.Close()
 canv.Print(outdir + canv.GetName() + '.pdf')
-canv.Print(outdir + canv.GetName() + '.png')
+#canv.Print(outdir + canv.GetName() + '.png')
 
 meta = {}
 

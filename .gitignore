@@ -3,3 +3,6 @@ CMSSW*
 *.pdf
 *.png
 *.pyc
+_*
+.*
+rundir*

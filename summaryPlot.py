@@ -5,6 +5,7 @@ import json
 import argparse
 import python.plotting as plot
 import fnmatch
+from collections import OrderedDict
 
 ROOT.PyConfig.IgnoreCommandLineOptions = True
 ROOT.gROOT.SetBatch(ROOT.kTRUE)
@@ -84,11 +85,11 @@ def LoadTranslations(jsonfilename):
 def GetListOfPOIsFromJsonFile(jsonfilename='observed.json', model='A1_mu', select=None):
     res = []
     with open(jsonfilename) as jsonfile:
-        full = json.load(jsonfile)[model]
+        full = json.load(jsonfile, object_pairs_hook=OrderedDict)[model]
     if select is None:
         return list(full.keys())
     elif '*' in select:
-        for key in full:
+        for key in reversed(full.keys()):
             if (fnmatch.fnmatch(key, select)):
                 res.append(key)
     elif ',' in select:
@@ -420,5 +421,5 @@ if __name__ == "__main__":
 
     pads[0].GetFrame().Draw()
     canv.Print('.pdf')
-    canv.Print('.png')
+    #canv.Print('.png')
 

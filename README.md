@@ -1,9 +1,10 @@
 # EFT fitting exercise
 
-This project currently performs an EFT combination of three analyses:
- - HIG-19-005: Hγγ STXS
+This project currently performs an EFT combination of four analyses:
+ - HIG-19-005: $H\gamma\gamma$ STXS
  - TOP-17-023: Single-top (t-channel)
- - SMP-20-005: Wγ production
+ - SMP-20-005: $W\gamma$ production
+ - ATLAS-STDM-2017-24: $WW$
 
 The combination is based on the publicly available hepData records. The EFT parameterisation is generated with EFT2Obs, using SMEFTsim 3.0 with the `topU3l` flavour model.
 
@@ -11,6 +12,7 @@ Useful links:
  - [Input analyses spreadsheet](https://docs.google.com/spreadsheets/d/1lynhfS0xjqNpHQ-LBJ0xQK2xN5P3J8LWfHFUxutFZfs/edit#gid=0)
  - [Conventions twiki](https://twiki.cern.ch/twiki/bin/view/LHCPhysics/LHCEFTExpCombinationConventions)
  - [Area 4 talk (Nov 21 Meeting)](https://indico.cern.ch/event/1076709/contributions/4596408/subcontributions/357249/attachments/2350785/4009533/hmilder_lhceftcombi_v3.pdf)
+
 
 
 ## Setup
@@ -35,70 +37,92 @@ cd ../../
 
 **NB: this software setup step is not always required if you already have a recent ROOT installation, but other environments have been found to lead to errors.**
 
+
+
 ## Workflow
 
-Currently, the full workflow of importing the analysis fit results and covariances matrices, constructing the likelihood model, and performing the likelihood scans is handled by one script: `testFit.py`. The script has comments throughout that explain each step. The arguments to `testFit.py` are of the form: `[label]:[measurement]:[scaling,...]. Example:
+The full workflow of importing the analysis fit results and covariances matrices, constructing the likelihood model, and performing the fits and likelihood scans is handled by three scripts: `pca.py`, `workspace.py`, and `fit.py`. The scripts have comments throughout that explain each step.
 
 
+### Basis rotation
 
-```sh
-python testFit.py \
-  hgg:measurements/CMS_hgg_STXS.json:scalings/HiggsTemplateCrossSections_HTXS_stage1_2_pTjet30.json \
-  wg:measurements/CMS_wgamma.json:scalings/CMS_2021_PAS_SMP_20_005_d54-x01-y01.json,scalings/CMS_2021_PAS_SMP_20_005_d55-x01-y01.json,scalings/CMS_2021_PAS_SMP_20_005_d56-x01-y01.json \
-  singlet:measurements/CMS_singlet.json:scalings/CMS_2019_I1744604_d13-x01-y01.json \
-  ww:measurements/ATLAS_WW_parsed.yaml:scalings/ATLAS_2019_I1734263_d04-x01-y01.json
-```
+A simultaneous fit of multiple parameters in the Warsaw basis will generally fail as there are too many degeneracies. We do a basis rotation in order to constrain multiple Wilson coefficients simultaneously. The rotation matrix is obtained by a principal component analysis (PCA), which is handled by the script `pca.py`. The script constructs a block-diagonal combined covariance matrix $V_\text{xs}$, inverts it, and rotates it to the EFT basis $c_j$
 
-Currently the script will perform a fit and likelihood scan for each EFT coefficient in turn. A simultaneous fit of multiple parameters will generally fail as there are too many degeneracies.
-This will produce a set of output root files, `scan_[X].root`, one for each parameter of interest.
+$$ V_\text{EFT}^{-1} = P^T V_\text{xs}^{-1} P $$
 
-Alternatively, a principal component analysis (PCA) can be done to determine the combinations of Wilson coefficients that can be constrained simultaneously. Currently, this is only implemented for the linear parameterisation. 
+using the linear parameterisation matrix $P$ with rows running over the measurement bins and columns running over the Wilson coefficients, i.e. the $(i,j)$-element of $P$ is $A_{c_j}^{\text{bin }i}$. In the Gaussian limit, $V_\text{EFT}^{-1}$ is the Fisher information matrix of the (linearised) SMEFT parameterisation. 
 
-The script `doPCA.py` imports the analysis fit results and covariance matrices $V_{xs}$, and the EFT parameterisations for each measurement bin. Then, the Fisher information matrix $V_{EFT}^{-1}$ is obtained by rotating the Hessian matrix $V_{xs}^{-1}$ to the EFT basis $c_j$
+By an eigendecomposition of the Fisher information matrix, we obtain a set of orthogonal directions in parameter space, the eigenvectors $\text{EV}_k$. The uncertainty of a measurement in direction of the eigenvector $\text{EV}_k$ is equal to one over the square root of its eigenvalue: $\sigma_k = 1/\sqrt{\lambda_k}$.
 
-$$ V_{EFT}^{-1} = P^T V_{xs}^{-1} P $$
-
-using the linear parameterisation matrix $P$ with rows running over the measurement bins and columns running over the Wilson coefficients: $P_{ij} = A_{c_j}^{\text{bin} i}$. The principal components are the eigenvectors of the Fisher information matrix. The expected uncertainty of a measurement in direction of a principal component is inversely proportional to the square root of its eigenvalue. 
-
-The output of `doPCA.py` is a json file `principalcomponents.json` containing the eigenvalues and eigenvectors of the Fisher information matrix and the list of Wilson coefficients. With the option `-p`, the script also plots the linear parameterisation matrix, the Fisher matrix, and the principal components:
+The input arguments to `pca.py` are of the form `[label]:[measurement file]:[scaling file, ...]`. The arguments `--rundir` and `--output` are optional, the default directory name is `rundir_{label1,label2,...}`. Example:
 
 ```sh
-python doPCA.py \
-  hgg:measurements/CMS_hgg_STXS.json:scalings/HiggsTemplateCrossSections_HTXS_stage1_2_pTjet30.json \
+python pca.py \
+  --input hgg:measurements/CMS_hgg_STXS.json:scalings/HiggsTemplateCrossSections_HTXS_stage1_2_pTjet30.json \
   wg:measurements/CMS_wgamma.json:scalings/CMS_2021_PAS_SMP_20_005_d54-x01-y01.json,scalings/CMS_2021_PAS_SMP_20_005_d55-x01-y01.json,scalings/CMS_2021_PAS_SMP_20_005_d56-x01-y01.json \
   singlet:measurements/CMS_singlet.json:scalings/CMS_2019_I1744604_d13-x01-y01.json \
   ww:measurements/ATLAS_WW_parsed.yaml:scalings/ATLAS_2019_I1734263_d04-x01-y01.json \
-  -p
+  --rundir examplerun --output rotmatrix.json
 ```
 
-A simultaneous fit of multiple principal components can be done with the script `pcaFit.py`. Like `testFit.py`, this produces a set of output files `scan_pc[X].root`.
+The Fisher information matrix $V_\text{EFT}^{-1}$, the rotation matrix $(\text{EV}_1 , ... , \text{EV}_N )$, and the eigenvalues $\lambda_k$ are saved in the output JSON file. Use the script `drawMatrix.py` to visualise the two matrices:
 
 ```sh
-python testFit.py \
-  hgg:measurements/CMS_hgg_STXS.json:scalings/HiggsTemplateCrossSections_HTXS_stage1_2_pTjet30.json \
+python drawMatrix.py --input examplerun/rotmatrix.json:fishermatrix --xlabels xpars --title 'Fisher information matrix'
+python drawMatrix.py --input examplerun/rotmatrix.json:rotationmatrix --xlabels xpars --ylabels ypars --title 'Basis rotation'
+```
+
+
+### Preparing the workspace
+
+The script `workspace.py` creates a ROOT file with two RooWorkspaces, `wsp_lin` and `wsp_quad`, containing a multivariate Gaussian pdf of the input measurements with the linearised and linear+quadratic EFT parameterisation respectively. When the output of `pca.py` is given as an argument to `workspace.py`, the workspaces are created in the rotated basis. When no basis rotation is used, a list of Wilson coefficients can be given with the `--coeffs` argument. Otherwise, the full set of coefficients found in the scaling files is used.
+
+```sh
+python workspace.py \
+  --input hgg:measurements/CMS_hgg_STXS.json:scalings/HiggsTemplateCrossSections_HTXS_stage1_2_pTjet30.json \
   wg:measurements/CMS_wgamma.json:scalings/CMS_2021_PAS_SMP_20_005_d54-x01-y01.json,scalings/CMS_2021_PAS_SMP_20_005_d55-x01-y01.json,scalings/CMS_2021_PAS_SMP_20_005_d56-x01-y01.json \
   singlet:measurements/CMS_singlet.json:scalings/CMS_2019_I1744604_d13-x01-y01.json \
-  ww:measurements/ATLAS_WW_parsed.yaml:scalings/ATLAS_2019_I1734263_d04-x01-y01.json
+  ww:measurements/ATLAS_WW_parsed.yaml:scalings/ATLAS_2019_I1734263_d04-x01-y01.json \
+  --rundir examplerun --rotation rotmatrix.json --output workspace.root
 ```
 
-Now we can make the NLL scan plots for each one. This script will also interpolate the 1 sigma intervals and store them in an output JSON file.
+
+### Fitting
+
+The fit is done with the script `fit.py`:
 
 ```sh
-for POI in chdd chj3 chl3 chwb clj3 cll1 cw chg chb chbox chd chj1 chu chw cbgre cbwre chq3 chtbre cqj31 cqj38 ctgre ctwre ; do python ./plot1DScan.py -m scan_${POI}.root --POI ${POI} --translate translate_root_SMEFTsim3.json --model eft --output nll_scan_${POI} --json eft_scans.json --no-input-label --chop 10; done
+python fit.py --rundir examplerun --input workspace.root --output fitresult.json --scan
 ```
 
-Or when using the principal components:
+It takes the RooWorkspace with the linearised model (option `--quadratic` or `-q` to use the linear+quadratic model) from the file `workspace.root` in the directory `examplerun`, does a simultaneous fit of all parameters of interest, and saves the best-fit value and uncertainty of each parameter, and the correlation matrix in `fitresult.json`. Parameters with large uncertainty are automatically fixed to zero (uncertainty $>10$ by default, can be changed with the `--max_unc` option). Parameters can be manually fixed to zero using the `--fix` option, e.g. when working in the rotated basis, you could look at the eigenvalues in `rotmatrix.json` and fix all eigenvectors to zero that have $\lambda$ smaller than some threshold with `--fix EV19 EV20 EV21 EV22 EV23 EV24 EV25`.
+
+
+### Parameter Scans
+
+With the option `--scan`, the script `fit.py` also does a likelihood scan of each parameter. This produces a set of output files `scan_{POI}_lin.root` in the directory `examplerun/scans`. Alternatively the option `--scan_fixed` can be used to do the likelihood scans with all other parameters fixed to zero. In the rotated basis with the linearised model, the POIs are orthogonal, so `--scan` and `--scan_fixed` are expected to give the same result, but when working in the Warsaw basis or using the linear+quadratic model, `--scan_fixed` can be useful.
+
+When working in the Warsaw basis, the simultaneous fit of the parameters of interest will likely fail. With the option `--scan_only`, `fit.py` will skip the simultaneous fit and only do likelihood scans for each parameter in turn (with all other parameters fixed to zero).
+
+Now we can make the NLL scan plots for each POI. The script `plot1DScan.py` will also interpolate the 1 sigma intervals and store them in an output JSON file.
 
 ```sh
-for PC in pc{0..10} ; do python ./plot1DScan.py -m scan_${PC}.root --POI ${PC} --translate translate_root_SMEFTsim3.json --model eft --output nll_scan_${PC} --json eft_scans.json --no-input-label --chop 10; done
+for POI in EV{1..13} ;
+do python ./plot1DScan.py -m examplerun/scans/scan_${POI}_lin.root \
+  --POI ${POI} --translate translate_root_SMEFTsim3.json --output examplerun/scans/nll_scan_${POI} \
+  --model eft --json examplerun/eft_scans.json --no-input-label ; 
+done
 ```
 
 From this JSON file we can make a summary plot of the fit results:
 
 ```sh
-python ./summaryPlot.py --input 'eft_scans.json:eft/*' --output eft_summary --vlines 0:LineWidth=1 --show-bars Error --legend Error --x-range=-10,10 --translate translate_root_SMEFTsim3.json --subline '' --frame-frac 0.80 --height 1000
+python ./summaryPlot.py --input 'examplerun/eft_scans.json:eft/*' \
+  --output examplerun/eft_summary --vlines 0:LineWidth=1 --show-bars Error --legend Error \
+  --x-range=-13,13 --translate translate_root_SMEFTsim3.json --subline '' --frame-frac 0.80 --height 1000
 ```
-![EFT summary plot](./eft_summary.png)
+![EFT summary plot](examplerun/eft_summary.png)
+
 
 
 ## EFT2Obs instructions
@@ -155,7 +179,7 @@ python scripts/launch_jobs.py --gridpack gridpack_qqH-SMEFTsim3.tar.gz -j 50 -s 
 
 Merge the output yoda files using `yodamerge -o RivetTotal.yoda Rivet_* --no-veto-empty`.
 
-Produce the scaling term json files (the `eft_exercise_bin_labels.json` file is located is included in the root of this repository):
+Produce the scaling term JSON files (the `eft_exercise_bin_labels.json` file is located is included in the root of this repository):
 ```sh
 python scripts/get_scaling.py -c config_st_tch_4f-SMEFTsim3.json -i test-st_tch_4f-SMEFTsim3/RivetTotal.yoda --hist "/CMS_2019_I1744604/d13-x01-y01" --bin-labels eft_exercise_bin_labels.json
 
