@@ -27,7 +27,7 @@ The EFT2Obs repository is included as a submodule. It is not necessary to initia
 
 To run the fit, a recent ROOT installation needs to be available. The code has been tested with the environment provided by the following setup:
 ```sh
-cd eft-exercise
+cd eft-exercise-cms
 export SCRAM_ARCH=slc7_amd64_gcc700
 cmsrel CMSSW_10_2_13
 cd CMSSW_10_2_13/src
