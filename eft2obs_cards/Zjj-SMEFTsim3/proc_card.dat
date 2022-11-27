@@ -1,0 +1,18 @@
+import model SMEFTsim_topU3l_MwScheme_UFO-massless
+set group_subprocesses Auto
+set ignore_six_quark_processes False
+set loop_optimized_output True
+set low_mem_multicore_nlo_generation False
+set default_unset_couplings 99
+set loop_color_flows False
+set gauge unitary
+set complex_mass_scheme False
+set max_npoint_for_channel 0
+define p = g u c d s u~ c~ d~ s~
+define j = g u c d s u~ c~ d~ s~
+define vl = ve vm vt
+define vl~ = ve~ vm~ vt~
+define l+ = e+ mu+ ta+
+define l- = e- mu- ta-
+generate p p > l+ l- j j NP<=1 SMHLOOP==0 QCD==0
+output Zjj-SMEFTsim3
