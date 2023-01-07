@@ -1,0 +1,141 @@
+dependent_variables:
+- header: {name: '$\textrm{d}\sigma_{\textrm{t}+\bar{\textrm{t}}}/\textrm{d}p_{\textrm{T}}$',
+    units: pb GEV**-1}
+  qualifiers:
+  - {name: RE, value: '$\rm{pp}\ \to\ \rm{tq} + \bar{\rm{t}}q$, $\rm{t} \to \ell\nu
+      \rm{b} (+ \nu_{\tau}\bar{\nu}_{\tau})$, $(\ell = \mu,\rm{e})$'}
+  - {name: SQRT(S), units: GEV, value: 13000}
+  values:
+  - errors:
+    - {label: Statistical, symerror: 0.000949}
+    - {label: '$\textrm{t}\bar{\textrm{t}}$/tW normalisation', symerror: 0.000126}
+    - {label: 'W/Z/$\gamma^{\star}$+jets normalisation', symerror: 0.00039}
+    - {label: Multijet normalisation, symerror: 0.000207}
+    - {label: Multijet shape, symerror: 9.4e-05}
+    - {label: Jet energy scale and resolution, symerror: 0.000548}
+    - {label: b tagging efficiencies and misidentification, symerror: 0.000297}
+    - {label: 'Others (lepton efficiencies, pileup, unclustered energy)', symerror: 0.000161}
+    - {label: Top quark mass, symerror: 4.32e-05}
+    - {label: 'PDF+$\alpha_{S}$', symerror: 0.000495}
+    - {label: $t$ channel renormalisation and factorisation scales, symerror: 0.00081}
+    - {label: $t$ channel parton shower, symerror: 0.0021}
+    - {label: '$\textrm{t}\bar{\textrm{t}}$ renormalisation and factorisation scales',
+      symerror: 0.000389}
+    - {label: '$\textrm{t}\bar{\textrm{t}}$ parton shower', symerror: 0.00121}
+    - {label: '$\textrm{t}\bar{\textrm{t}}$ underlying event tune', symerror: 0.000497}
+    - {label: '$\textrm{t}\bar{\textrm{t}}$ $p_{\textrm{T}}$ reweighting', symerror: 0.000331}
+    - {label: W+jets renormalisation and factorisation scales, symerror: 0.000388}
+    - {label: Color reconnection, symerror: 0.00131}
+    - {label: Fragmentation model, symerror: 0.000554}
+    - {label: Luminosity, symerror: 0.000414}
+    - {label: Profiled uncertainties only, symerror: 0.00127}
+    - {label: Total, symerror: 0.00333}
+    value: 0.0166
+  - errors:
+    - {label: Statistical, symerror: 0.00129}
+    - {label: '$\textrm{t}\bar{\textrm{t}}$/tW normalisation', symerror: 0.000346}
+    - {label: 'W/Z/$\gamma^{\star}$+jets normalisation', symerror: 0.00046}
+    - {label: Multijet normalisation, symerror: 0.000252}
+    - {label: Multijet shape, symerror: 0.0}
+    - {label: Jet energy scale and resolution, symerror: 0.000746}
+    - {label: b tagging efficiencies and misidentification, symerror: 0.000472}
+    - {label: 'Others (lepton efficiencies, pileup, unclustered energy)', symerror: 0.000324}
+    - {label: Top quark mass, symerror: 0.000409}
+    - {label: 'PDF+$\alpha_{S}$', symerror: 0.000905}
+    - {label: $t$ channel renormalisation and factorisation scales, symerror: 0.000169}
+    - {label: $t$ channel parton shower, symerror: 0.00447}
+    - {label: '$\textrm{t}\bar{\textrm{t}}$ renormalisation and factorisation scales',
+      symerror: 0.000672}
+    - {label: '$\textrm{t}\bar{\textrm{t}}$ parton shower', symerror: 0.00118}
+    - {label: '$\textrm{t}\bar{\textrm{t}}$ underlying event tune', symerror: 0.000604}
+    - {label: '$\textrm{t}\bar{\textrm{t}}$ $p_{\textrm{T}}$ reweighting', symerror: 0.000354}
+    - {label: W+jets renormalisation and factorisation scales, symerror: 0.000281}
+    - {label: Color reconnection, symerror: 0.00149}
+    - {label: Fragmentation model, symerror: 0.000719}
+    - {label: Luminosity, symerror: 0.00158}
+    - {label: Profiled uncertainties only, symerror: 0.00173}
+    - {label: Total, symerror: 0.00566}
+    value: 0.0631
+  - errors:
+    - {label: Statistical, symerror: 0.00107}
+    - {label: '$\textrm{t}\bar{\textrm{t}}$/tW normalisation', symerror: 0.0}
+    - {label: 'W/Z/$\gamma^{\star}$+jets normalisation', symerror: 0.00016}
+    - {label: Multijet normalisation, symerror: 0.000143}
+    - {label: Multijet shape, symerror: 9.09e-05}
+    - {label: Jet energy scale and resolution, symerror: 0.000103}
+    - {label: b tagging efficiencies and misidentification, symerror: 0.0}
+    - {label: 'Others (lepton efficiencies, pileup, unclustered energy)', symerror: 0.000295}
+    - {label: Top quark mass, symerror: 0.00023}
+    - {label: 'PDF+$\alpha_{S}$', symerror: 0.000603}
+    - {label: $t$ channel renormalisation and factorisation scales, symerror: 0.000494}
+    - {label: $t$ channel parton shower, symerror: 0.00295}
+    - {label: '$\textrm{t}\bar{\textrm{t}}$ renormalisation and factorisation scales',
+      symerror: 0.000731}
+    - {label: '$\textrm{t}\bar{\textrm{t}}$ parton shower', symerror: 0.00108}
+    - {label: '$\textrm{t}\bar{\textrm{t}}$ underlying event tune', symerror: 0.000297}
+    - {label: '$\textrm{t}\bar{\textrm{t}}$ $p_{\textrm{T}}$ reweighting', symerror: 0.000265}
+    - {label: W+jets renormalisation and factorisation scales, symerror: 0.000187}
+    - {label: Color reconnection, symerror: 0.00115}
+    - {label: Fragmentation model, symerror: 0.000127}
+    - {label: Luminosity, symerror: 0.000999}
+    - {label: Profiled uncertainties only, symerror: 0.00128}
+    - {label: Total, symerror: 0.00394}
+    value: 0.04
+  - errors:
+    - {label: Statistical, symerror: 0.000651}
+    - {label: '$\textrm{t}\bar{\textrm{t}}$/tW normalisation', symerror: 0.000206}
+    - {label: 'W/Z/$\gamma^{\star}$+jets normalisation', symerror: 0.000235}
+    - {label: Multijet normalisation, symerror: 0.000146}
+    - {label: Multijet shape, symerror: 0.000136}
+    - {label: Jet energy scale and resolution, symerror: 0.000143}
+    - {label: b tagging efficiencies and misidentification, symerror: 0.000101}
+    - {label: 'Others (lepton efficiencies, pileup, unclustered energy)', symerror: 0.000207}
+    - {label: Top quark mass, symerror: 0.000278}
+    - {label: 'PDF+$\alpha_{S}$', symerror: 0.000231}
+    - {label: $t$ channel renormalisation and factorisation scales, symerror: 0.000265}
+    - {label: $t$ channel parton shower, symerror: 0.000763}
+    - {label: '$\textrm{t}\bar{\textrm{t}}$ renormalisation and factorisation scales',
+      symerror: 0.000531}
+    - {label: '$\textrm{t}\bar{\textrm{t}}$ parton shower', symerror: 0.000971}
+    - {label: '$\textrm{t}\bar{\textrm{t}}$ underlying event tune', symerror: 0.000789}
+    - {label: '$\textrm{t}\bar{\textrm{t}}$ $p_{\textrm{T}}$ reweighting', symerror: 0.000139}
+    - {label: W+jets renormalisation and factorisation scales, symerror: 0.00014}
+    - {label: Color reconnection, symerror: 0.00104}
+    - {label: Fragmentation model, symerror: 0.000334}
+    - {label: Luminosity, symerror: 0.000304}
+    - {label: Profiled uncertainties only, symerror: 0.000821}
+    - {label: Total, symerror: 0.00215}
+    value: 0.0122
+  - errors:
+    - {label: Statistical, symerror: 0.000141}
+    - {label: '$\textrm{t}\bar{\textrm{t}}$/tW normalisation', symerror: 7.35e-05}
+    - {label: 'W/Z/$\gamma^{\star}$+jets normalisation', symerror: 0.0}
+    - {label: Multijet normalisation, symerror: 2.62e-05}
+    - {label: Multijet shape, symerror: 0.0}
+    - {label: Jet energy scale and resolution, symerror: 2.93e-06}
+    - {label: b tagging efficiencies and misidentification, symerror: 0.0}
+    - {label: 'Others (lepton efficiencies, pileup, unclustered energy)', symerror: 1.51e-05}
+    - {label: Top quark mass, symerror: 0.000196}
+    - {label: 'PDF+$\alpha_{S}$', symerror: 2.93e-05}
+    - {label: $t$ channel renormalisation and factorisation scales, symerror: 3.13e-05}
+    - {label: $t$ channel parton shower, symerror: 0.000221}
+    - {label: '$\textrm{t}\bar{\textrm{t}}$ renormalisation and factorisation scales',
+      symerror: 7.24e-05}
+    - {label: '$\textrm{t}\bar{\textrm{t}}$ parton shower', symerror: 0.000335}
+    - {label: '$\textrm{t}\bar{\textrm{t}}$ underlying event tune', symerror: 1.9e-05}
+    - {label: '$\textrm{t}\bar{\textrm{t}}$ $p_{\textrm{T}}$ reweighting', symerror: 3.63e-05}
+    - {label: W+jets renormalisation and factorisation scales, symerror: 4.06e-05}
+    - {label: Color reconnection, symerror: 0.00021}
+    - {label: Fragmentation model, symerror: 7.57e-05}
+    - {label: Luminosity, symerror: 4.74e-05}
+    - {label: Profiled uncertainties only, symerror: 0.000177}
+    - {label: Total, symerror: 0.000541}
+    value: 0.00189
+independent_variables:
+- header: {name: 'Particle-level top quark $p_\textrm{T}$', units: GEV}
+  values:
+  - {high: 50.0, low: 0.0}
+  - {high: 80.0, low: 50.0}
+  - {high: 120.0, low: 80.0}
+  - {high: 180.0, low: 120.0}
+  - {high: 300.0, low: 180.0}

@@ -1,0 +1,41 @@
+{
+  "single_t": {
+    "report_number": "CMS-TOP-17-023",
+    "arXiv": "1907.08330",
+    "observable": "Particle-level top quark pT",
+    "figure": "Figure 8, top left",
+    "measurement": "hepdata_inputs/single_t/HEPData-ins1744604_pt_particle_sum.yaml",
+    "covariance": "hepdata_inputs/single_t/HEPData-ins1744604_pt_particle_sum_cov.yaml",
+    "measurement_source": "https://www.hepdata.net/record/ins1744604",
+    "prediction": "hepdata_inputs/single_t/ValPlots_d13-x01-y01.dat",
+    "prediction_source": "https://cms-rivet.web.cern.ch/cms-rivet/ValPlots/TOP/TOP-17-023/v0",
+    "rivet": "EFT2Obs/RivetPlugins/CMS_2019_I1744604.cc",
+    "rivet_source": "https://rivet.hepforge.org/analyses/CMS_2019_I1744604"
+  },
+  "hgg": {
+    "report_number": "CMS-HIG-19-015",
+    "arXiv": "2103.06956",
+    "observable": "STXS stage-1.2 minimal merging scheme",
+    "figure": "Figure 20, Table 13",
+    "measurement": "hepdata_inputs/hgg/HEPData-ins1851456_stxs_stage_1.2_minimal_merging_scheme.yaml",
+    "covariance": "hepdata_inputs/hgg/HEPData-ins1851456_correlations_stxs_stage_1.2_minimal_merging_scheme.yaml",
+    "measurement_source": "https://www.hepdata.net/record/ins1851456",
+    "prediction": "hepdata_inputs/hgg/HEPData-ins1851456_stxs_stage_1.2_minimal_merging_scheme.yaml",
+    "prediction_source": "https://www.hepdata.net/record/ins1851456",
+    "rivet": "EFT2Obs/RivetPlugins/HiggsTemplateCrossSections.cc",
+    "rivet_source": "?"
+  },
+  "wg": {
+    "report_number": "CMS-SMP-20-005",
+    "arXiv": "2111.13948",
+    "observable": "Photon pT times W boson decay angle",
+    "figure": "Figure 17",
+    "measurement": "hepdata_inputs/wg/HEPData-ins1978840_fig15_1.yaml",
+    "covariance": "hepdata_inputs/wg/HEPData-ins1978840_fig16_1.yaml",
+    "measurement_source": "https://www.hepdata.net/record/ins1978840",
+    "prediction": "hepdata_inputs/wg/HEPData-ins1978840_fig15_1.yaml",
+    "prediction_source": "https://www.hepdata.net/record/ins1978840",
+    "rivet": "EFT2Obs/RivetPlugins/CMS_2021_PAS_SMP_20_005.cc",
+    "rivet_source": "?"
+  }
+}
