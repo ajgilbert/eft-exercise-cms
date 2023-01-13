@@ -1,0 +1,22 @@
+change rwgt_dir rwgt
+change process g g > h SMHLOOP<=1 NP<=1
+change process g g > h j SMHLOOP<=1 NP<=1 --add
+change process g g > h j j SMHLOOP<=1 NP<=1 --add
+launch --rwgt_name=rw0000
+set SMEFT 1 0
+set SMEFT 6 0
+launch --rwgt_name=rw0001
+set SMEFT 1 0.005
+set SMEFT 6 0
+launch --rwgt_name=rw0002
+set SMEFT 1 0.01
+set SMEFT 6 0
+launch --rwgt_name=rw0003
+set SMEFT 1 0
+set SMEFT 6 0.005
+launch --rwgt_name=rw0004
+set SMEFT 1 0
+set SMEFT 6 0.01
+launch --rwgt_name=rw0005
+set SMEFT 1 0.01
+set SMEFT 6 0.01
