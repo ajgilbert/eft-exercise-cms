@@ -1,0 +1,88 @@
+dependent_variables:
+- header: {name: 'Var($\textrm{d}\sigma_{\textrm{t}+\bar{\textrm{t}}}/\textrm{d}p_{\textrm{T}}$)',
+    units: (pb GEV**-1)**2}
+  qualifiers:
+  - {name: RE, value: '$\rm{pp}\ \to\ \rm{tq} + \bar{\rm{t}}q$, $\rm{t} \to \ell\nu
+      \rm{b} (+ \nu_{\tau}\bar{\nu}_{\tau})$, $(\ell = \mu,\rm{e})$'}
+  - {name: SQRT(S), units: GEV, value: 13000}
+  values:
+  - {value: 1.11e-05}
+  - {value: 1.26e-05}
+  - {value: 6.84e-06}
+  - {value: 1.96e-06}
+  - {value: 2.67e-07}
+  - {value: 1.26e-05}
+  - {value: 3.2e-05}
+  - {value: 1.81e-05}
+  - {value: 3.75e-06}
+  - {value: 1.32e-06}
+  - {value: 6.84e-06}
+  - {value: 1.81e-05}
+  - {value: 1.55e-05}
+  - {value: 5.44e-06}
+  - {value: 1.35e-06}
+  - {value: 1.96e-06}
+  - {value: 3.75e-06}
+  - {value: 5.44e-06}
+  - {value: 4.64e-06}
+  - {value: 6.9e-07}
+  - {value: 2.67e-07}
+  - {value: 1.32e-06}
+  - {value: 1.35e-06}
+  - {value: 6.9e-07}
+  - {value: 2.93e-07}
+independent_variables:
+- header: {name: 'Particle-level top quark $p_\textrm{T}$', units: GEV}
+  values:
+  - {high: 50.0, low: 0.0}
+  - {high: 50.0, low: 0.0}
+  - {high: 50.0, low: 0.0}
+  - {high: 50.0, low: 0.0}
+  - {high: 50.0, low: 0.0}
+  - {high: 80.0, low: 50.0}
+  - {high: 80.0, low: 50.0}
+  - {high: 80.0, low: 50.0}
+  - {high: 80.0, low: 50.0}
+  - {high: 80.0, low: 50.0}
+  - {high: 120.0, low: 80.0}
+  - {high: 120.0, low: 80.0}
+  - {high: 120.0, low: 80.0}
+  - {high: 120.0, low: 80.0}
+  - {high: 120.0, low: 80.0}
+  - {high: 180.0, low: 120.0}
+  - {high: 180.0, low: 120.0}
+  - {high: 180.0, low: 120.0}
+  - {high: 180.0, low: 120.0}
+  - {high: 180.0, low: 120.0}
+  - {high: 300.0, low: 180.0}
+  - {high: 300.0, low: 180.0}
+  - {high: 300.0, low: 180.0}
+  - {high: 300.0, low: 180.0}
+  - {high: 300.0, low: 180.0}
+- header: {name: 'Particle-level top quark $p_\textrm{T}$', units: GEV}
+  values:
+  - {high: 50.0, low: 0.0}
+  - {high: 80.0, low: 50.0}
+  - {high: 120.0, low: 80.0}
+  - {high: 180.0, low: 120.0}
+  - {high: 300.0, low: 180.0}
+  - {high: 50.0, low: 0.0}
+  - {high: 80.0, low: 50.0}
+  - {high: 120.0, low: 80.0}
+  - {high: 180.0, low: 120.0}
+  - {high: 300.0, low: 180.0}
+  - {high: 50.0, low: 0.0}
+  - {high: 80.0, low: 50.0}
+  - {high: 120.0, low: 80.0}
+  - {high: 180.0, low: 120.0}
+  - {high: 300.0, low: 180.0}
+  - {high: 50.0, low: 0.0}
+  - {high: 80.0, low: 50.0}
+  - {high: 120.0, low: 80.0}
+  - {high: 180.0, low: 120.0}
+  - {high: 300.0, low: 180.0}
+  - {high: 50.0, low: 0.0}
+  - {high: 80.0, low: 50.0}
+  - {high: 120.0, low: 80.0}
+  - {high: 180.0, low: 120.0}
+  - {high: 300.0, low: 180.0}
