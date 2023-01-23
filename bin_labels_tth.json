@@ -1,0 +1,9 @@
+{
+  "/HiggsTemplateCrossSections/HTXS_stage1_2_pTjet30": [
+    "TTH_PTH_0_60",
+    "TTH_PTH_60_120",
+    "TTH_PTH_120_200",
+    "TTH_PTH_200_300",
+    "TTH_PTH_GT300"
+  ]
+}

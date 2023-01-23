@@ -1,5 +1,7 @@
 # Generating the EFT parameterisations
 
+How to generate the EFT parameterisations using the cards provided in the subdirectories is described in this document. The full setup starting from scratch is explained [here](STXS/README.md)
+
 First set up the SMEFTsim3 model:
 ```sh
 cd EFT2Obs
@@ -12,12 +14,12 @@ The cards for each process are in:
 - WW: `WW-SMEFTsim3`
 - Zjj: `Zjj-SMEFTsim3`
 - H $\rightarrow \gamma\gamma$ (STXS): 
-  - qqH: `qqH-SMEFTsim3`
-  - ggH: `ggH-SMEFTsim3`
-  - WH: `WH-SMEFTsim3`
-  - ZH: `ZH-SMEFTsim3`
-  - ttH: `ttH-SMEFTsim3`
-  - tH: `tH-SMEFTsim3`
+  - qqH: `STXS/qqH-SMEFTsim3`
+  - ggH: `STXS/ggH-SMEFTsim3`
+  - WH: `STXS/WH-SMEFTsim3`
+  - ZH: `STXS/ZH-SMEFTsim3`
+  - ttH: `STXS/ttH-SMEFTsim3`
+  - tH: `STXS/tH-SMEFTsim3`
 
 Copy each of the card directories in `eft2obs_cards` to `EFT2Obs/cards/` and go to the main EFT2Obs directory. Then set up each process:
 ```sh
@@ -84,7 +86,7 @@ Merge the output yoda files using
 ```sh
 yodamerge -o RivetTotal.yoda Rivet_* --no-veto-empty
 ```
-Produce the JSON files with the EFT scaling parameters $A_{i}$ and $B_{ij}$:
+Produce the JSON files with the EFT scaling parameters $A_{i}$ and $B_{ij}$ (first, copy these files to the main EFT2Obs directory: `eft_exercise_bin_labels.json`, `bin_labels_ggh.json`, `bin_labels_wh.json`, `bin_labels_zh.json`, `bin_labels_tth.json`, `bin_labels_th.json`):
 ```sh
 python scripts/get_scaling.py -i qqH-SMEFTsim3/RivetTotal.yoda -o scaling_qqH-SMEFTsim3 \
   --hist "/HiggsTemplateCrossSections/HTXS_stage1_2_pTjet30" --bin-labels eft_exercise_bin_labels.json \

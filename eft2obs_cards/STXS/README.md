@@ -107,30 +107,35 @@ When adding processes with extra jets, as we do for the `ggH`, `ttH`, `WH`, and 
 To enable MLM merging, in `run_card.dat`, set
 - `1 = ickkw`
 - `30.0 = xqcut`
-In the `ggH` case, we set `20.0 = xqcut` instead, following https://github.com/cms-sw/genproductions/blob/master/bin/MadGraph5_aMCatNLO/cards/production/13TeV/HToAATo4B/SUSY_GluGluH_01J_HToAATo4B_M-MASS/SUSY_GluGluH_01J_HToAATo4B_M-MASS_run_card.dat
+
+In the `ggH` case, we set `20.0 = xqcut` instead, following [this example](https://github.com/cms-sw/genproductions/blob/master/bin/MadGraph5_aMCatNLO/cards/production/13TeV/HToAATo4B/SUSY_GluGluH_01J_HToAATo4B_M-MASS/SUSY_GluGluH_01J_HToAATo4B_M-MASS_run_card.dat).
 
 In the `ggH` and `ttH` case, MadGraph does not allow to use MLM merging. As a workaround we can do the following:
 - Delete the process directories `MG5_aMC_v2_6_7/ggH-SMEFTsim3` and `MG5_aMC_v2_6_7/ttH-SMEFTsim3`
 - In `proc_card.dat`, change the process definitions
-  - `ggH`:
+
+`ggH`:
 ```
 generate g g > h SMHLOOP<=1 NP=0 @0
 add process g g > h j SMHLOOP<=1 NP=0 @1
 add process g g > h j j SMHLOOP<=1 NP=0 @2
 ```
-  - `ttH`
+
+`ttH`
 ```
 generate p p > h t t~ QCD<=4 SMHLOOP<=1 NP=0 @0
 add process p p > h t t~ j QCD<=4 SMHLOOP<=1 NP=0 @1
 ```
 - In `reweight_card.dat`, add these lines between the first and the second line
-  - `ggH`:
+
+`ggH`:
 ```
 change process g g > h SMHLOOP<=1 NP<=1
 change process g g > h j SMHLOOP<=1 NP<=1 --add
 change process g g > h j j SMHLOOP<=1 NP<=1 --add
 ```
-  - `ttH`:
+
+`ttH`:
 ```
 change process p p > h t t~ QCD<=4 SMHLOOP<=1 NP<=1
 change process p p > h t t~ j QCD<=4 SMHLOOP<=1 NP<=1 --add
@@ -139,9 +144,7 @@ change process p p > h t t~ j QCD<=4 SMHLOOP<=1 NP<=1 --add
 ```sh
 ./scripts/setup_process.sh {PRODUCTION_MODE}-SMEFTsim3
 ```
-The existing cards in `cards/{PRODUCTION_MODE}-SMEFTsim3` will not be overwritten.
-
-At this point, the contents of `cards/{PRODUCTION_MODE}-SMEFTsim3` should be exactly the same as the cards provided in this directory.
+The existing cards in `cards/{PRODUCTION_MODE}-SMEFTsim3` will not be overwritten. At this point, the contents of `cards/{PRODUCTION_MODE}-SMEFTsim3` should be exactly the same as the cards provided in this directory.
 
 
 ## Make gridpack
@@ -161,11 +164,10 @@ The file `gridpack_{PRODUCTION_MODE}-SMEFTsim3.tar.gz` will be copied to the mai
 
 Now we can generate events. This will run through the event generation with `MG5_aMC@NLO`, EFT reweighting, showering with `Pythia`, decaying the top quarks with `MadSpin`, and finally event selection with `Rivet`.
 
-Make sure the Rivet routine [`HiggsTemplateCrossSections.cc`](https://github.com/fstaeg/EFT2Obs/blob/master/RivetPlugins/HiggsTemplateCrossSections.cc) (and `HiggsTemplateCrossSections.h`](https://github.com/fstaeg/EFT2Obs/blob/master/RivetPlugins/HiggsTemplateCrossSections.h)) is placed in `EFT2Obs/RivetPlugins` and compiled:
+Make sure the Rivet routine [`HiggsTemplateCrossSections.cc`](https://github.com/fstaeg/EFT2Obs/blob/master/RivetPlugins/HiggsTemplateCrossSections.cc) (and [`HiggsTemplateCrossSections.h`](https://github.com/fstaeg/EFT2Obs/blob/master/RivetPlugins/HiggsTemplateCrossSections.h)) is placed in `EFT2Obs/RivetPlugins` and compiled:
 ```sh
 ./scripts/setup_rivet_plugins.sh
 ```
-
 Then generate 1 million events in a set of slurm jobs:
 ```sh
 python scripts/launch_jobs.py --gridpack gridpack_qqH-SMEFTsim3.tar.gz -j 50 -s 1 -e 20000 \
@@ -196,7 +198,7 @@ The output of the previous command is several YODA files containing all the Rive
 ```sh
 yodamerge -o RivetTotal.yoda Rivet_* --no-veto-empty
 ```
-Then use the script `get_scaling.py` to produce the JSON files with the EFT scaling parameters $A_{i}$ and $B_{ij}$:
+Then use the script `get_scaling.py` to produce the JSON files with the EFT scaling parameters $A_{i}$ and $B_{ij}$ (first, copy these files to the main EFT2Obs directory: `eft_exercise_bin_labels.json`, `bin_labels_ggh.json`, `bin_labels_wh.json`, `bin_labels_zh.json`, `bin_labels_tth.json`, `bin_labels_th.json`):
 ```sh
 python scripts/get_scaling.py -i qqH-SMEFTsim3/RivetTotal.yoda -o scaling_qqH-SMEFTsim3 \
   --hist "/HiggsTemplateCrossSections/HTXS_stage1_2_pTjet30" --bin-labels eft_exercise_bin_labels.json \
