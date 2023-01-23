@@ -5,6 +5,7 @@ This project currently performs an EFT combination of four analyses:
  - TOP-17-023: Single-top (t-channel)
  - SMP-20-005: $W\gamma$ production
  - ATLAS-STDM-2017-24: $WW$
+ - ATLAS-STDM-2017-27: $Zjj$
 
 The combination is based on the publicly available hepData records. The EFT parameterisation is generated with EFT2Obs, using SMEFTsim 3.0 with the `topU3l` flavour model.
 
@@ -62,6 +63,7 @@ python pca.py \
   wg:measurements/CMS_wgamma.json:scalings/CMS_2021_PAS_SMP_20_005_d54-x01-y01.json,scalings/CMS_2021_PAS_SMP_20_005_d55-x01-y01.json,scalings/CMS_2021_PAS_SMP_20_005_d56-x01-y01.json \
   singlet:measurements/CMS_singlet.json:scalings/CMS_2019_I1744604_d13-x01-y01.json \
   ww:measurements/ATLAS_WW_parsed.yaml:scalings/ATLAS_2019_I1734263_d04-x01-y01.json \
+  zjj:measurements/ATLAS_Zjj_parsed.yaml:scalings/ATLAS_2020_I1803608_d04-x01-y01.json \
   --rundir examplerun --output rotmatrix.json
 ```
 
@@ -83,6 +85,7 @@ python workspace.py \
   wg:measurements/CMS_wgamma.json:scalings/CMS_2021_PAS_SMP_20_005_d54-x01-y01.json,scalings/CMS_2021_PAS_SMP_20_005_d55-x01-y01.json,scalings/CMS_2021_PAS_SMP_20_005_d56-x01-y01.json \
   singlet:measurements/CMS_singlet.json:scalings/CMS_2019_I1744604_d13-x01-y01.json \
   ww:measurements/ATLAS_WW_parsed.yaml:scalings/ATLAS_2019_I1734263_d04-x01-y01.json \
+  zjj:measurements/ATLAS_Zjj_parsed.yaml:scalings/ATLAS_2020_I1803608_d04-x01-y01.json \
   --rundir examplerun --rotation rotmatrix.json --output workspace.root
 ```
 

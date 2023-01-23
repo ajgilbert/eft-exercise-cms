@@ -2,7 +2,7 @@
 
 To generate the EFT parameterisations for the STXS bins using the cards provided in this directory, copy each subdirectory to `EFT2Obs/cards` and follow the instructions [here](../README.md). The full setup starting from scratch is described in this README.
 
-![STXS bins](examplerun/STXS_bins.png)
+![STXS bins](STXS_bins.png)
 
 ## Process definition
 
