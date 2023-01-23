@@ -49,7 +49,7 @@ In some cases, the gridpack generation might take too long to run locally. In th
 ```sh
 python scripts/launch_gridpack.py [X]-SMEFTsim3 -c 64 --job-mode slurm --task_name [X]_gridpack
 ```
-Generate 1 million events (in processes that are sensitive to a large number of Wilson coefficients, the reweighting can take along time, so the number of events per job should be reduced to make the event generation faster):
+Generate 1 million events (in processes that are sensitive to a large number of Wilson coefficients, the reweighting can take a long time, so the number of events per job should be reduced to make the event generation faster):
 ```sh
 python scripts/launch_jobs.py --gridpack gridpack_qqH-SMEFTsim3.tar.gz -j 50 -s 1 -e 20000 \
   -p HiggsTemplateCrossSections -o qqH-SMEFTsim3 --task-name qqH --dir jobs --job-mode slurm \
