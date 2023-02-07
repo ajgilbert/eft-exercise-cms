@@ -1,0 +1,586 @@
+dependent_variables:
+- header: {name: ''}
+  qualifiers:
+  - {name: '', value: COVARIANCE MATRIX}
+  values:
+  - errors: []
+    value: '8.16782405324e-05'
+  - errors: []
+    value: '0.000161565638742'
+  - errors: []
+    value: '0.000155349620516'
+  - errors: []
+    value: '0.000110112933005'
+  - errors: []
+    value: '7.26037510135e-05'
+  - errors: []
+    value: '4.53399361523e-05'
+  - errors: []
+    value: '2.3631657984e-05'
+  - errors: []
+    value: '1.3171154265e-05'
+  - errors: []
+    value: '7.59772831581e-06'
+  - errors: []
+    value: '2.99367169977e-06'
+  - errors: []
+    value: '1.74464826211e-06'
+  - errors: []
+    value: '2.41649472705e-07'
+  - errors: []
+    value: '0.000161565638742'
+  - errors: []
+    value: '0.000402686843619'
+  - errors: []
+    value: '0.000401551318225'
+  - errors: []
+    value: '0.000292316239077'
+  - errors: []
+    value: '0.000195248288869'
+  - errors: []
+    value: '0.000113915983'
+  - errors: []
+    value: '6.58661140927e-05'
+  - errors: []
+    value: '3.35783021718e-05'
+  - errors: []
+    value: '1.83724181497e-05'
+  - errors: []
+    value: '9.29629340336e-06'
+  - errors: []
+    value: '4.22205665836e-06'
+  - errors: []
+    value: '6.99300592275e-07'
+  - errors: []
+    value: '0.000155349620516'
+  - errors: []
+    value: '0.000401551318225'
+  - errors: []
+    value: '0.000510699177916'
+  - errors: []
+    value: '0.000377704708813'
+  - errors: []
+    value: '0.000232622023875'
+  - errors: []
+    value: '0.000128737488104'
+  - errors: []
+    value: '8.1573539531e-05'
+  - errors: []
+    value: '4.75280300752e-05'
+  - errors: []
+    value: '2.17350169611e-05'
+  - errors: []
+    value: '1.21658869181e-05'
+  - errors: []
+    value: '4.76852584595e-06'
+  - errors: []
+    value: '1.13987774097e-06'
+  - errors: []
+    value: '0.000110112933005'
+  - errors: []
+    value: '0.000292316239077'
+  - errors: []
+    value: '0.000377704708813'
+  - errors: []
+    value: '0.000304121033457'
+  - errors: []
+    value: '0.000182205630998'
+  - errors: []
+    value: '0.000101360295165'
+  - errors: []
+    value: '6.58193164876e-05'
+  - errors: []
+    value: '3.80080111351e-05'
+  - errors: []
+    value: '1.77689785458e-05'
+  - errors: []
+    value: '1.01065339321e-05'
+  - errors: []
+    value: '4.266079207e-06'
+  - errors: []
+    value: '8.65099359485e-07'
+  - errors: []
+    value: '7.26037510135e-05'
+  - errors: []
+    value: '0.000195248288869'
+  - errors: []
+    value: '0.000232622023875'
+  - errors: []
+    value: '0.000182205630998'
+  - errors: []
+    value: '0.000124069340856'
+  - errors: []
+    value: '6.94571752167e-05'
+  - errors: []
+    value: '4.1127436344e-05'
+  - errors: []
+    value: '2.43661867174e-05'
+  - errors: []
+    value: '1.17734989054e-05'
+  - errors: []
+    value: '6.1262101212e-06'
+  - errors: []
+    value: '3.10668995826e-06'
+  - errors: []
+    value: '4.74250878464e-07'
+  - errors: []
+    value: '4.53399361523e-05'
+  - errors: []
+    value: '0.000113915983'
+  - errors: []
+    value: '0.000128737488104'
+  - errors: []
+    value: '0.000101360295165'
+  - errors: []
+    value: '6.94571752167e-05'
+  - errors: []
+    value: '4.59720078291e-05'
+  - errors: []
+    value: '2.41580012197e-05'
+  - errors: []
+    value: '1.36930659017e-05'
+  - errors: []
+    value: '7.50341631e-06'
+  - errors: []
+    value: '3.1054917385e-06'
+  - errors: []
+    value: '1.94355947552e-06'
+  - errors: []
+    value: '3.09823531614e-07'
+  - errors: []
+    value: '2.3631657984e-05'
+  - errors: []
+    value: '6.58661140927e-05'
+  - errors: []
+    value: '8.1573539531e-05'
+  - errors: []
+    value: '6.58193164876e-05'
+  - errors: []
+    value: '4.1127436344e-05'
+  - errors: []
+    value: '2.41580012197e-05'
+  - errors: []
+    value: '1.66147135626e-05'
+  - errors: []
+    value: '8.46889443729e-06'
+  - errors: []
+    value: '4.35728312153e-06'
+  - errors: []
+    value: '2.40778873074e-06'
+  - errors: []
+    value: '1.11864902088e-06'
+  - errors: []
+    value: '2.52560656254e-07'
+  - errors: []
+    value: '1.3171154265e-05'
+  - errors: []
+    value: '3.35783021718e-05'
+  - errors: []
+    value: '4.75280300752e-05'
+  - errors: []
+    value: '3.80080111351e-05'
+  - errors: []
+    value: '2.43661867174e-05'
+  - errors: []
+    value: '1.36930659017e-05'
+  - errors: []
+    value: '8.46889443729e-06'
+  - errors: []
+    value: '6.41810903328e-06'
+  - errors: []
+    value: '2.2637098237e-06'
+  - errors: []
+    value: '1.2966710212e-06'
+  - errors: []
+    value: '6.40961942337e-07'
+  - errors: []
+    value: '1.10675384875e-07'
+  - errors: []
+    value: '7.59772831581e-06'
+  - errors: []
+    value: '1.83724181497e-05'
+  - errors: []
+    value: '2.17350169611e-05'
+  - errors: []
+    value: '1.77689785458e-05'
+  - errors: []
+    value: '1.17734989054e-05'
+  - errors: []
+    value: '7.50341631e-06'
+  - errors: []
+    value: '4.35728312153e-06'
+  - errors: []
+    value: '2.2637098237e-06'
+  - errors: []
+    value: '1.93084580317e-06'
+  - errors: []
+    value: '6.23825375905e-07'
+  - errors: []
+    value: '3.13696820421e-07'
+  - errors: []
+    value: '9.88216221639e-08'
+  - errors: []
+    value: '2.99367169977e-06'
+  - errors: []
+    value: '9.29629340336e-06'
+  - errors: []
+    value: '1.21658869181e-05'
+  - errors: []
+    value: '1.01065339321e-05'
+  - errors: []
+    value: '6.1262101212e-06'
+  - errors: []
+    value: '3.1054917385e-06'
+  - errors: []
+    value: '2.40778873074e-06'
+  - errors: []
+    value: '1.2966710212e-06'
+  - errors: []
+    value: '6.23825375905e-07'
+  - errors: []
+    value: '6.19725884676e-07'
+  - errors: []
+    value: '1.7323870862e-07'
+  - errors: []
+    value: '2.21501772667e-08'
+  - errors: []
+    value: '1.74464826211e-06'
+  - errors: []
+    value: '4.22205665836e-06'
+  - errors: []
+    value: '4.76852584595e-06'
+  - errors: []
+    value: '4.266079207e-06'
+  - errors: []
+    value: '3.10668995826e-06'
+  - errors: []
+    value: '1.94355947552e-06'
+  - errors: []
+    value: '1.11864902088e-06'
+  - errors: []
+    value: '6.40961942337e-07'
+  - errors: []
+    value: '3.13696820421e-07'
+  - errors: []
+    value: '1.7323870862e-07'
+  - errors: []
+    value: '1.64733352888e-07'
+  - errors: []
+    value: '7.36816172044e-09'
+  - errors: []
+    value: '2.41649472705e-07'
+  - errors: []
+    value: '6.99300592275e-07'
+  - errors: []
+    value: '1.13987774097e-06'
+  - errors: []
+    value: '8.65099359485e-07'
+  - errors: []
+    value: '4.74250878464e-07'
+  - errors: []
+    value: '3.09823531614e-07'
+  - errors: []
+    value: '2.52560656254e-07'
+  - errors: []
+    value: '1.10675384875e-07'
+  - errors: []
+    value: '9.88216221639e-08'
+  - errors: []
+    value: '2.21501772667e-08'
+  - errors: []
+    value: '7.36816172044e-09'
+  - errors: []
+    value: '1.34252267918e-08'
+independent_variables:
+- header: {name: Bin}
+  values:
+  - {value: '1'}
+  - {value: '2'}
+  - {value: '3'}
+  - {value: '4'}
+  - {value: '5'}
+  - {value: '6'}
+  - {value: '7'}
+  - {value: '8'}
+  - {value: '9'}
+  - {value: '10'}
+  - {value: '11'}
+  - {value: '12'}
+  - {value: '1'}
+  - {value: '2'}
+  - {value: '3'}
+  - {value: '4'}
+  - {value: '5'}
+  - {value: '6'}
+  - {value: '7'}
+  - {value: '8'}
+  - {value: '9'}
+  - {value: '10'}
+  - {value: '11'}
+  - {value: '12'}
+  - {value: '1'}
+  - {value: '2'}
+  - {value: '3'}
+  - {value: '4'}
+  - {value: '5'}
+  - {value: '6'}
+  - {value: '7'}
+  - {value: '8'}
+  - {value: '9'}
+  - {value: '10'}
+  - {value: '11'}
+  - {value: '12'}
+  - {value: '1'}
+  - {value: '2'}
+  - {value: '3'}
+  - {value: '4'}
+  - {value: '5'}
+  - {value: '6'}
+  - {value: '7'}
+  - {value: '8'}
+  - {value: '9'}
+  - {value: '10'}
+  - {value: '11'}
+  - {value: '12'}
+  - {value: '1'}
+  - {value: '2'}
+  - {value: '3'}
+  - {value: '4'}
+  - {value: '5'}
+  - {value: '6'}
+  - {value: '7'}
+  - {value: '8'}
+  - {value: '9'}
+  - {value: '10'}
+  - {value: '11'}
+  - {value: '12'}
+  - {value: '1'}
+  - {value: '2'}
+  - {value: '3'}
+  - {value: '4'}
+  - {value: '5'}
+  - {value: '6'}
+  - {value: '7'}
+  - {value: '8'}
+  - {value: '9'}
+  - {value: '10'}
+  - {value: '11'}
+  - {value: '12'}
+  - {value: '1'}
+  - {value: '2'}
+  - {value: '3'}
+  - {value: '4'}
+  - {value: '5'}
+  - {value: '6'}
+  - {value: '7'}
+  - {value: '8'}
+  - {value: '9'}
+  - {value: '10'}
+  - {value: '11'}
+  - {value: '12'}
+  - {value: '1'}
+  - {value: '2'}
+  - {value: '3'}
+  - {value: '4'}
+  - {value: '5'}
+  - {value: '6'}
+  - {value: '7'}
+  - {value: '8'}
+  - {value: '9'}
+  - {value: '10'}
+  - {value: '11'}
+  - {value: '12'}
+  - {value: '1'}
+  - {value: '2'}
+  - {value: '3'}
+  - {value: '4'}
+  - {value: '5'}
+  - {value: '6'}
+  - {value: '7'}
+  - {value: '8'}
+  - {value: '9'}
+  - {value: '10'}
+  - {value: '11'}
+  - {value: '12'}
+  - {value: '1'}
+  - {value: '2'}
+  - {value: '3'}
+  - {value: '4'}
+  - {value: '5'}
+  - {value: '6'}
+  - {value: '7'}
+  - {value: '8'}
+  - {value: '9'}
+  - {value: '10'}
+  - {value: '11'}
+  - {value: '12'}
+  - {value: '1'}
+  - {value: '2'}
+  - {value: '3'}
+  - {value: '4'}
+  - {value: '5'}
+  - {value: '6'}
+  - {value: '7'}
+  - {value: '8'}
+  - {value: '9'}
+  - {value: '10'}
+  - {value: '11'}
+  - {value: '12'}
+  - {value: '1'}
+  - {value: '2'}
+  - {value: '3'}
+  - {value: '4'}
+  - {value: '5'}
+  - {value: '6'}
+  - {value: '7'}
+  - {value: '8'}
+  - {value: '9'}
+  - {value: '10'}
+  - {value: '11'}
+  - {value: '12'}
+- header: {name: Bin}
+  values:
+  - {value: '1'}
+  - {value: '1'}
+  - {value: '1'}
+  - {value: '1'}
+  - {value: '1'}
+  - {value: '1'}
+  - {value: '1'}
+  - {value: '1'}
+  - {value: '1'}
+  - {value: '1'}
+  - {value: '1'}
+  - {value: '1'}
+  - {value: '2'}
+  - {value: '2'}
+  - {value: '2'}
+  - {value: '2'}
+  - {value: '2'}
+  - {value: '2'}
+  - {value: '2'}
+  - {value: '2'}
+  - {value: '2'}
+  - {value: '2'}
+  - {value: '2'}
+  - {value: '2'}
+  - {value: '3'}
+  - {value: '3'}
+  - {value: '3'}
+  - {value: '3'}
+  - {value: '3'}
+  - {value: '3'}
+  - {value: '3'}
+  - {value: '3'}
+  - {value: '3'}
+  - {value: '3'}
+  - {value: '3'}
+  - {value: '3'}
+  - {value: '4'}
+  - {value: '4'}
+  - {value: '4'}
+  - {value: '4'}
+  - {value: '4'}
+  - {value: '4'}
+  - {value: '4'}
+  - {value: '4'}
+  - {value: '4'}
+  - {value: '4'}
+  - {value: '4'}
+  - {value: '4'}
+  - {value: '5'}
+  - {value: '5'}
+  - {value: '5'}
+  - {value: '5'}
+  - {value: '5'}
+  - {value: '5'}
+  - {value: '5'}
+  - {value: '5'}
+  - {value: '5'}
+  - {value: '5'}
+  - {value: '5'}
+  - {value: '5'}
+  - {value: '6'}
+  - {value: '6'}
+  - {value: '6'}
+  - {value: '6'}
+  - {value: '6'}
+  - {value: '6'}
+  - {value: '6'}
+  - {value: '6'}
+  - {value: '6'}
+  - {value: '6'}
+  - {value: '6'}
+  - {value: '6'}
+  - {value: '7'}
+  - {value: '7'}
+  - {value: '7'}
+  - {value: '7'}
+  - {value: '7'}
+  - {value: '7'}
+  - {value: '7'}
+  - {value: '7'}
+  - {value: '7'}
+  - {value: '7'}
+  - {value: '7'}
+  - {value: '7'}
+  - {value: '8'}
+  - {value: '8'}
+  - {value: '8'}
+  - {value: '8'}
+  - {value: '8'}
+  - {value: '8'}
+  - {value: '8'}
+  - {value: '8'}
+  - {value: '8'}
+  - {value: '8'}
+  - {value: '8'}
+  - {value: '8'}
+  - {value: '9'}
+  - {value: '9'}
+  - {value: '9'}
+  - {value: '9'}
+  - {value: '9'}
+  - {value: '9'}
+  - {value: '9'}
+  - {value: '9'}
+  - {value: '9'}
+  - {value: '9'}
+  - {value: '9'}
+  - {value: '9'}
+  - {value: '10'}
+  - {value: '10'}
+  - {value: '10'}
+  - {value: '10'}
+  - {value: '10'}
+  - {value: '10'}
+  - {value: '10'}
+  - {value: '10'}
+  - {value: '10'}
+  - {value: '10'}
+  - {value: '10'}
+  - {value: '10'}
+  - {value: '11'}
+  - {value: '11'}
+  - {value: '11'}
+  - {value: '11'}
+  - {value: '11'}
+  - {value: '11'}
+  - {value: '11'}
+  - {value: '11'}
+  - {value: '11'}
+  - {value: '11'}
+  - {value: '11'}
+  - {value: '11'}
+  - {value: '12'}
+  - {value: '12'}
+  - {value: '12'}
+  - {value: '12'}
+  - {value: '12'}
+  - {value: '12'}
+  - {value: '12'}
+  - {value: '12'}
+  - {value: '12'}
+  - {value: '12'}
+  - {value: '12'}
+  - {value: '12'}

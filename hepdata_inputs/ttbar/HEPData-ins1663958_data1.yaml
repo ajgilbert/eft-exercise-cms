@@ -1,0 +1,68 @@
+dependent_variables:
+- header: {name: '$\frac{{d}\sigma}{{d}p_\text{T}(\text{t}_\text{h})}$ [pb GeV$^{-1}$]'}
+  qualifiers:
+  - {name: SQRT(S), units: GEV, value: '13000'}
+  values:
+  - errors:
+    - {label: stat, symerror: '0.001280'}
+    - {label: sys, symerror: '0.008947'}
+    value: '0.163525'
+  - errors:
+    - {label: stat, symerror: '0.001729'}
+    - {label: sys, symerror: '0.019992'}
+    value: '0.375775'
+  - errors:
+    - {label: stat, symerror: '0.001776'}
+    - {label: sys, symerror: '0.022529'}
+    value: '0.391288'
+  - errors:
+    - {label: stat, symerror: '0.001510'}
+    - {label: sys, symerror: '0.017374'}
+    value: '0.294837'
+  - errors:
+    - {label: stat, symerror: '0.001175'}
+    - {label: sys, symerror: '0.011076'}
+    value: '0.192104'
+  - errors:
+    - {label: stat, symerror: '0.0008875'}
+    - {label: sys, symerror: '0.0067219'}
+    value: '0.1164503'
+  - errors:
+    - {label: stat, symerror: '0.0006767'}
+    - {label: sys, symerror: '0.0040195'}
+    value: '0.0700426'
+  - errors:
+    - {label: stat, symerror: '0.0004521'}
+    - {label: sys, symerror: '0.0024927'}
+    value: '0.0390593'
+  - errors:
+    - {label: stat, symerror: '0.0003351'}
+    - {label: sys, symerror: '0.0013485'}
+    value: '0.0204334'
+  - errors:
+    - {label: stat, symerror: '0.0002391'}
+    - {label: sys, symerror: '0.0007500'}
+    value: '0.0103673'
+  - errors:
+    - {label: stat, symerror: '0.0001488'}
+    - {label: sys, symerror: '0.0003776'}
+    value: '0.0046421'
+  - errors:
+    - {label: stat, symerror: '0.00003258'}
+    - {label: sys, symerror: '0.00011119'}
+    value: '0.00081481'
+independent_variables:
+- header: {name: '$p_\text{T}(\text{t}_\text{h})$ [GeV]'}
+  values:
+  - {high: 40.0, low: 0.0}
+  - {high: 80.0, low: 40.0}
+  - {high: 120.0, low: 80.0}
+  - {high: 160.0, low: 120.0}
+  - {high: 200.0, low: 160.0}
+  - {high: 240.0, low: 200.0}
+  - {high: 280.0, low: 240.0}
+  - {high: 330.0, low: 280.0}
+  - {high: 380.0, low: 330.0}
+  - {high: 430.0, low: 380.0}
+  - {high: 500.0, low: 430.0}
+  - {high: 800.0, low: 500.0}

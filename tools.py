@@ -76,11 +76,11 @@ def ReadDependent(entry, col=0, error=list(), sym_errors=True):
             for ecol in error:
                 err = v['errors'][ecol]
                 if 'symerror' in err:
-                    sum_hi_sq += pow(err['symerror'], 2)
-                    sum_lo_sq += pow(err['symerror'], 2)
+                    sum_hi_sq += pow(float(err['symerror']), 2)
+                    sum_lo_sq += pow(float(err['symerror']), 2)
                 elif 'asymerror' in err:
-                    sum_hi_sq += pow(err['asymerror']['plus'], 2)
-                    sum_lo_sq += pow(err['asymerror']['minus'], 2)
+                    sum_hi_sq += pow(float(err['asymerror']['plus']), 2)
+                    sum_lo_sq += pow(float(err['asymerror']['minus']), 2)
             sum_hi = sqrt(sum_hi_sq)
             sum_lo = sqrt(sum_lo_sq)
             if sym_errors:
@@ -89,33 +89,66 @@ def ReadDependent(entry, col=0, error=list(), sym_errors=True):
                 res.append((-1. * sum_lo, +1. * sum_hi))
         return np.array(res)
     else:
-        return np.array([X['value'] for X in entry['dependent_variables'][col]['values']])
+        return np.array([float(X['value']) for X in entry['dependent_variables'][col]['values']])
 
 
-def ReadYodaString(inputstr):
-    lines = inputstr.split('\n')
+def SplitFile(in_file,split_a,split_b):
+    res = list()
     i = 0
-    while lines[i].find('# BEGIN') == -1:
-        i += 1
-    header = lines[i].split(' ')
-    yoda_obj_type = header[2] if len(header)>=2 else None
+    while i < len(in_file):
+        if split_a in in_file[i]:
+            res.append([in_file[i]])
+            while not split_b in in_file[i]:
+                i+=1
+                res[-1].append(in_file[i])
+        i+=1
+    return res
+
+
+def CleanString(in_line):
+    # remove spaces, tabs, newlines at beginning and end of string
+    # and remove repeated spaces between words
+    res = in_line.strip().replace('\t',' ')
+    while '  ' in res:
+        res = res.replace('  ',' ')
+    return res
+
+
+def ReadYodaFile(in_file,title=None,col=None):
+    # read data from a "Rivet validation plot" yoda file
+    res = dict()
+    for subfile in SplitFile(in_file,'# BEGIN','# END'):
+        lines = [CleanString(line) for line in subfile]
+
+        table_title = ''
+        table_header, table_raw = list(), list()
+
+        for line in lines:
+            if '# END' in line: break
+            if line.split('=')[0] == 'Title':
+                table_title = line.split('=')[1]
+                if table_title != title and title is not None:
+                    break
+            elif line.startswith('#') and not '# BEGIN' in line:
+                table_header = line.split(' ')[1:]
+            elif line[0].isdigit() or (line[0]=='-' and line[1].isdigit()):
+                table_raw.append([float(nr) for nr in line.split(' ')])
+
+        if len(table_raw) == 0: continue
+        
+        table = dict()
+        while len(table_header) < len(table_raw[0]):
+            table_header.append('col%s' % len(table_header))
+        for i,h in enumerate(table_header):
+            table[h] = [line[i] for line in table_raw]
+        
+        res[table_title] = table
     
-    title, bins, vals, errs = str(), list(), list(), list()
-    if yoda_obj_type == 'HISTO1D':
-        i = 1
-        while i < len(lines):
-            if lines[i].startswith('Title'):
-                title = lines[i][6:]
-            elif lines[i].startswith('# x'):
-                while lines[i+1][0].isdigit() or (lines[i+1][0]=='-' and lines[i+1][1].isdigit()):
-                    i += 1
-                    line = [float(nr) for nr in lines[i].split(' ')]
-                    bins.append((line[0],line[1]))
-                    vals.append(line[2])
-                    errs.append((line[3],line[4]))
-            i += 1
-    
-    return (title, {'bins': np.array(bins), 'vals': np.array(vals), 'errs': np.array(errs)})
+    if col is not None:
+        res = dict((k,v[col]) for k,v in res.items() if v.has_key(col))    
+    if title is not None:
+        res = res[title]
+    return res
 
 
 def CovTMatrix(cov):

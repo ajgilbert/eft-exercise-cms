@@ -1,7 +1,7 @@
 import yaml
 import json
 import numpy as np
-from tools import Measurement, ReadIndependent, ReadDependent, ReadYodaString
+from tools import Measurement, ReadIndependent, ReadDependent, ReadYodaFile
 
 
 def ReadHgg(resources):
@@ -135,20 +135,13 @@ def ReadSingleT(resources):
     with open(resources['measurement'], 'r') as f:
         vals = yaml.safe_load(f)
     with open(resources['covariance'], 'r') as f:
-        cov_file = yaml.safe_load(f)
+        cov = yaml.safe_load(f)
     # The SM predictions are not in HEPData, have to read them 
     # from a YODA file that can not be opened with yoda.read()
     with open(resources['prediction'], 'r') as f:
-        pred_str = f.read().replace('\t',' ')
-
-    substrings = list()
-    while pred_str.find('# END') != -1:
-        lenline = pred_str[pred_str.find('# END'):].find('\n')+2
-        substrings.append(pred_str[:pred_str.find('# END')+lenline])
-        pred_str = pred_str[pred_str.find('# END')+lenline:]
+        pred = f.readlines()  
     
-    pred = dict([ReadYodaString(substr) for substr in substrings])
-    sm = pred['Powheg4FS']['vals']
+    sm = ReadYodaFile(pred, title='Powheg4FS', col='val')
 
     labels = ReadIndependent(vals, col=0)
     labels = ['pt_t_bin_%i' % X for X in range(len(labels))]
@@ -161,7 +154,45 @@ def ReadSingleT(resources):
     bf = bf / sm
     bf_unc = bf_unc / sm
 
-    cov_vals = ReadDependent(cov_file, col=0)
+    cov_vals = ReadDependent(cov, col=0)
+    assert((N * N) == len(cov_vals))
+
+    cov = np.zeros((N, N))
+
+    for i in range(N):
+        for j in range(N):
+            # Here we are given the covariance of the differential cross section
+            # directly - so we need to convert to ratio wrt. SM
+            cov[i][j] = cov_vals[i * N + j] / (sm[i] * sm[j])
+        
+    return Measurement(nbins=N, bin_labels=labels, sm=sm, bf=bf, cov=cov)
+
+
+def ReadTT(resources):
+    # Read the TOP-17-002 ttbar cross section measurements
+    with open(resources['measurement'], 'r') as f:
+        vals = yaml.safe_load(f)
+    with open(resources['covariance'], 'r') as f:
+        cov = yaml.safe_load(f)
+    # The SM predictions are not in HEPData, have to read them 
+    # from a YODA file that can not be opened with yoda.read()
+    with open(resources['prediction'], 'r') as f:
+        pred = f.readlines()  
+    
+    sm = ReadYodaFile(pred, title='PAPER', col='val')
+
+    labels = ReadIndependent(vals, col=0)
+    labels = ['pt_t_bin_%i' % X for X in range(len(labels))]
+    N = len(labels)
+    
+    bf = ReadDependent(vals, col=0)
+    bf_unc = ReadDependent(vals, col=0, error=[0,1], sym_errors=True)
+    
+    assert(N == len(sm) == len(bf) == len(bf_unc))
+    bf = bf / sm
+    bf_unc = bf_unc / sm
+
+    cov_vals = ReadDependent(cov, col=0)
     assert((N * N) == len(cov_vals))
 
     cov = np.zeros((N, N))
@@ -180,9 +211,10 @@ with open('hepdata_inputs/resources.json','r') as f:
 
 # Read in the data for each channel
 channel_data = {
-    'CMS_hgg_STXS': ReadHgg(resources_dict['hgg']),
-    'CMS_wgamma': ReadWg(resources_dict['wg']),
-    'CMS_singlet': ReadSingleT(resources_dict['single_t'])
+    #'CMS_hgg_STXS': ReadHgg(resources_dict['hgg']),
+    #'CMS_wgamma': ReadWg(resources_dict['wg']),
+    'CMS_singlet': ReadSingleT(resources_dict['single_t']),
+    'CMS_ttbar': ReadTT(resources_dict['ttbar'])
 }
 
 for label, data in channel_data.items():
