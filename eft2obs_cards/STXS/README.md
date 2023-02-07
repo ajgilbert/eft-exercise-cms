@@ -54,6 +54,22 @@ add process p p > h t~ l+ vl NP<=1 @3
 ```
 
 
+## Set up MadSpin for top quark decays
+
+We use `MadSpin` to decay the top quarks. To `cards/ttH-SMEFTsim3` and `cards/tH-SMEFTsim3`, add a `madspin_card.dat` with the following content:
+```
+set ms_dir ./madspingrid
+set Nevents_for_max_weigth 250
+set max_weight_ps_point 400
+set max_running_process 1
+
+decay t > w+ b, w+ > l+ vl
+decay t~ > w- b~, w- > l- vl~
+
+launch
+```
+
+
 ## Set up cards
 
 From the main EFT2Obs directory, run
@@ -70,19 +86,6 @@ In `run_card.dat`, two changes have to be made:
 
 This is necessary because the extra weights that appear when `True = use_syst` is set are not handled correctly by EFT2Obs.
 
-
-## Set up MadSpin for top quark decays
-
-We use `MadSpin` to decay the top quarks. To `cards/ttH-SMEFTsim3` and `cards/tH-SMEFTsim3`, add a `madspin_card.dat` with the following content:
-```
-set ms_dir ./madspingrid
-set Nevents_for_max_weigth 250
-set max_weight_ps_point 400
-set max_running_process 1
-
-decay t > w+ b, w+ > l+ vl
-decay t~ > w- b~, w- > l- vl~
-```
 
 
 ## Identify EFT operators
