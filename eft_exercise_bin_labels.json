@@ -52,5 +52,19 @@
     "WW_ptl_bin_11",
     "WW_ptl_bin_12",
     "WW_ptl_bin_13"
+  ],
+  "/ATLAS_2020_I1803608:TYPE=EW_ONLY/d04-x01-y01": [
+    "ZJJ_dphijj_bin_0",
+    "ZJJ_dphijj_bin_1",
+    "ZJJ_dphijj_bin_2",
+    "ZJJ_dphijj_bin_3",
+    "ZJJ_dphijj_bin_4",
+    "ZJJ_dphijj_bin_5",
+    "ZJJ_dphijj_bin_6",
+    "ZJJ_dphijj_bin_7",
+    "ZJJ_dphijj_bin_8",
+    "ZJJ_dphijj_bin_9",
+    "ZJJ_dphijj_bin_10",
+    "ZJJ_dphijj_bin_11"
   ]
 }

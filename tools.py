@@ -92,6 +92,32 @@ def ReadDependent(entry, col=0, error=list(), sym_errors=True):
         return np.array([X['value'] for X in entry['dependent_variables'][col]['values']])
 
 
+def ReadYodaString(inputstr):
+    lines = inputstr.split('\n')
+    i = 0
+    while lines[i].find('# BEGIN') == -1:
+        i += 1
+    header = lines[i].split(' ')
+    yoda_obj_type = header[2] if len(header)>=2 else None
+    
+    title, bins, vals, errs = str(), list(), list(), list()
+    if yoda_obj_type == 'HISTO1D':
+        i = 1
+        while i < len(lines):
+            if lines[i].startswith('Title'):
+                title = lines[i][6:]
+            elif lines[i].startswith('# x'):
+                while lines[i+1][0].isdigit() or (lines[i+1][0]=='-' and lines[i+1][1].isdigit()):
+                    i += 1
+                    line = [float(nr) for nr in lines[i].split(' ')]
+                    bins.append((line[0],line[1]))
+                    vals.append(line[2])
+                    errs.append((line[3],line[4]))
+            i += 1
+    
+    return (title, {'bins': np.array(bins), 'vals': np.array(vals), 'errs': np.array(errs)})
+
+
 def CovTMatrix(cov):
     shape = np.shape(cov)
     assert(shape[0] == shape[1])
