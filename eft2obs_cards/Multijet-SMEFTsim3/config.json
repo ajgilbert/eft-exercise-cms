@@ -1,0 +1,153 @@
+{
+    "blocks": [
+        "SMEFT"
+    ],
+    "inactive": {
+        "default_val": 0.0,
+        "parameters": []
+    },
+    "parameter_defaults": {
+        "block": "SMEFT",
+        "gen": 0.0,
+        "sm": 0.0,
+        "val": 0.01
+    },
+    "parameters": [
+        {
+            "index": 1,
+            "name": "cg"
+        },
+        {
+            "index": 36,
+            "name": "cjj11"
+        },
+        {
+            "index": 37,
+            "name": "cjj18"
+        },
+        {
+            "index": 38,
+            "name": "cjj31"
+        },
+        {
+            "index": 39,
+            "name": "cjj38"
+        },
+        {
+            "index": 40,
+            "name": "cqj11"
+        },
+        {
+            "index": 41,
+            "name": "cqj18"
+        },
+        {
+            "index": 42,
+            "name": "cqj31"
+        },
+        {
+            "index": 43,
+            "name": "cqj38"
+        },
+        {
+            "index": 44,
+            "name": "cqq1"
+        },
+        {
+            "index": 45,
+            "name": "cqq8"
+        },
+        {
+            "index": 46,
+            "name": "cuu1"
+        },
+        {
+            "index": 47,
+            "name": "cuu8"
+        },
+        {
+            "index": 51,
+            "name": "cdd1"
+        },
+        {
+            "index": 52,
+            "name": "cdd8"
+        },
+        {
+            "index": 53,
+            "name": "cbb"
+        },
+        {
+            "index": 54,
+            "name": "cbd1"
+        },
+        {
+            "index": 55,
+            "name": "cbd8"
+        },
+        {
+            "index": 56,
+            "name": "cud1"
+        },
+        {
+            "index": 59,
+            "name": "cbu1"
+        },
+        {
+            "index": 60,
+            "name": "cud8"
+        },
+        {
+            "index": 63,
+            "name": "cbu8"
+        },
+        {
+            "index": 66,
+            "name": "cju1"
+        },
+        {
+            "index": 67,
+            "name": "cqu1"
+        },
+        {
+            "index": 68,
+            "name": "cju8"
+        },
+        {
+            "index": 69,
+            "name": "cqu8"
+        },
+        {
+            "index": 74,
+            "name": "cjd1"
+        },
+        {
+            "index": 75,
+            "name": "cjd8"
+        },
+        {
+            "index": 76,
+            "name": "cqd1"
+        },
+        {
+            "index": 77,
+            "name": "cqd8"
+        },
+        {
+            "index": 78,
+            "name": "cbj1"
+        },
+        {
+            "index": 79,
+            "name": "cbj8"
+        },
+        {
+            "index": 80,
+            "name": "cqb1"
+        },
+        {
+            "index": 81,
+            "name": "cqb8"
+        }
+    ]
+}

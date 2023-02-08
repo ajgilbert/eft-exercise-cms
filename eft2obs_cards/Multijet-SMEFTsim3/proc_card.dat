@@ -1,0 +1,7 @@
+import model SMEFTsim_topU3l_MwScheme_UFO-massless_no_b_mass_qcd_only
+
+
+generate p p > j j NP<=0 @0
+add process p p > j j j NP<=0 @1
+
+output Multijet-SMEFTsim3
