@@ -124,7 +124,7 @@ Now you can generate 1 million events for each decay mode in a set of slurm jobs
 ```sh
 python scripts/launch_jobs.py --gridpack gridpack_ttbar-tlep-SMEFTsim3.tar.gz -j 200 -s 1 -e 5000 \
   -p CMS_2018_I1663958 -o ttbar-tlep-SMEFTsim3 --task-name ttbar --dir jobs --job-mode slurm
-  python scripts/launch_jobs.py --gridpack gridpack_ttbar-tbarlep-SMEFTsim3.tar.gz -j 200 -s 1 -e 5000 \
+python scripts/launch_jobs.py --gridpack gridpack_ttbar-tbarlep-SMEFTsim3.tar.gz -j 200 -s 1 -e 5000 \
   -p CMS_2018_I1663958 -o ttbar-tbarlep-SMEFTsim3 --task-name ttbar --dir jobs --job-mode slurm
 ```
 When using condor, replace `--job-mode slurm` by `--job-mode condor` and add `--sub-opts '+MaxRuntime = 14400\nrequirements = (OpSysAndVer =?= "CentOS7")'`.
@@ -136,11 +136,13 @@ The output of the previous command is 200 YODA files per decay mode, containing 
 ```sh
 yodamerge -o ttbar-tlep-SMEFTsim3/RivetTotal.yoda ttbar-tlep-SMEFTsim3/Rivet_* --no-veto-empty
 yodamerge -o ttbar-tbarlep-SMEFTsim3/RivetTotal.yoda ttbar-tbarlep-SMEFTsim3/Rivet_* --no-veto-empty
-mkdir ttbar-merged
-yodamerge -o ttbar-merged/RivetTotal.yoda ttbar-tlep-SMEFTsim3/RivetTotal.yoda ttbar-tbarlep-SMEFTsim3/RivetTotal.yoda
 ```
-If you have used the unedited Rivet routine, each of these files will be around to 400 MB, so you might need to merge them in batches of a few files at a time.
-
+If you have used the unedited Rivet routine, each of these files will be around to 400 MB, so you might need to merge them in batches of a few files at a time. Next, add the histograms from the two ttbar decay modes using `yodamerge` with th option `--add`:
+```sh
+mkdir ttbar-merged
+yodamerge -o ttbar-merged/RivetTotal.yoda ttbar-tlep-SMEFTsim3/RivetTotal.yoda \
+  ttbar-tbarlep-SMEFTsim3/RivetTotal.yoda --no-veto-empty --add
+```
 Then use the script `get_scaling.py` to produce the JSON file with the EFT scaling parameters $A_{i}$ and $B_{ij}$ (first, copy this file to the main EFT2Obs directory: `eft_exercise_bin_labels.json`):
 ```sh
 python scripts/get_scaling.py -i ttbar-merged/RivetTotal.yoda -o scaling_ttbar-SMEFTsim3 \
