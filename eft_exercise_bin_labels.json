@@ -12,6 +12,20 @@
     "QQ2HQQ_GE2J_MJJ_GT700_PTH_0_200_PTHJJ_0_25",
     "QQ2HQQ_GE2J_MJJ_GT700_PTH_0_200_PTHJJ_GT25"
   ],
+  "/CMS_2018_I1663958/d05-x01-y01": [
+    "pt_tlep_bin_0",
+    "pt_tlep_bin_1",
+    "pt_tlep_bin_2",
+    "pt_tlep_bin_3",
+    "pt_tlep_bin_4",
+    "pt_tlep_bin_5",
+    "pt_tlep_bin_6",
+    "pt_tlep_bin_7",
+    "pt_tlep_bin_8",
+    "pt_tlep_bin_9",
+    "pt_tlep_bin_10",
+    "pt_tlep_bin_11"
+  ],
   "/CMS_2019_I1744604/d13-x01-y01": [
     "pt_t_bin_0",
     "pt_t_bin_1",

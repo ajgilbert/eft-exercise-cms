@@ -2,12 +2,12 @@
   "ttbar": {
     "report_number": "CMS-TOP-17-002",
     "arXiv": "1803.08856",
-    "observable": "pT of hadronically decaying top",
-    "figure": "Figure 11, top left",
-    "measurement": "hepdata_inputs/ttbar/HEPData-ins1663958_data1.yaml",
-    "covariance": "hepdata_inputs/ttbar/HEPData-ins1663958_data2.yaml",
+    "observable": "pT of leptonically decaying top",
+    "figure": "Figure 11, bottom left",
+    "measurement": "hepdata_inputs/ttbar/HEPData-ins1663958_data5.yaml",
+    "covariance": "hepdata_inputs/ttbar/HEPData-ins1663958_data6.yaml",
     "measurement_source": "https://www.hepdata.net/record/ins1663958",
-    "prediction": "hepdata_inputs/ttbar/ValPlots_d01-x01-y01.dat",
+    "prediction": "hepdata_inputs/ttbar/ValPlots_d05-x01-y01.dat",
     "prediction_source": "https://cms-rivet.web.cern.ch/cms-rivet/ValPlots/TOP/TOP-17-002/v1"
   },
   "single_t": {

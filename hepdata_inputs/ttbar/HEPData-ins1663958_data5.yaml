@@ -1,0 +1,68 @@
+dependent_variables:
+- header: {name: '$\frac{{d}\sigma}{{d}p_\text{T}(\text{t}_\text{l})}$ [pb GeV$^{-1}$]'}
+  qualifiers:
+  - {name: SQRT(S), units: GEV, value: '13000'}
+  values:
+  - errors:
+    - {label: stat, symerror: '0.002395'}
+    - {label: sys, symerror: '0.009872'}
+    value: '0.151071'
+  - errors:
+    - {label: stat, symerror: '0.003986'}
+    - {label: sys, symerror: '0.021229'}
+    value: '0.357321'
+  - errors:
+    - {label: stat, symerror: '0.003861'}
+    - {label: sys, symerror: '0.022302'}
+    value: '0.368096'
+  - errors:
+    - {label: stat, symerror: '0.003284'}
+    - {label: sys, symerror: '0.017959'}
+    value: '0.315532'
+  - errors:
+    - {label: stat, symerror: '0.002571'}
+    - {label: sys, symerror: '0.012027'}
+    value: '0.195126'
+  - errors:
+    - {label: stat, symerror: '0.002044'}
+    - {label: sys, symerror: '0.008096'}
+    value: '0.132146'
+  - errors:
+    - {label: stat, symerror: '0.001598'}
+    - {label: sys, symerror: '0.006031'}
+    value: '0.075476'
+  - errors:
+    - {label: stat, symerror: '0.0009767'}
+    - {label: sys, symerror: '0.0028470'}
+    value: '0.0432326'
+  - errors:
+    - {label: stat, symerror: '0.0007393'}
+    - {label: sys, symerror: '0.0023433'}
+    value: '0.0220664'
+  - errors:
+    - {label: stat, symerror: '0.0005902'}
+    - {label: sys, symerror: '0.0016936'}
+    value: '0.0111224'
+  - errors:
+    - {label: stat, symerror: '0.0002893'}
+    - {label: sys, symerror: '0.0007133'}
+    value: '0.0057784'
+  - errors:
+    - {label: stat, symerror: '0.00003714'}
+    - {label: sys, symerror: '0.00010420'}
+    value: '0.00097386'
+independent_variables:
+- header: {name: '$p_\text{T}(\text{t}_\text{l})$ [GeV]'}
+  values:
+  - {high: 40.0, low: 0.0}
+  - {high: 80.0, low: 40.0}
+  - {high: 120.0, low: 80.0}
+  - {high: 160.0, low: 120.0}
+  - {high: 200.0, low: 160.0}
+  - {high: 240.0, low: 200.0}
+  - {high: 280.0, low: 240.0}
+  - {high: 330.0, low: 280.0}
+  - {high: 380.0, low: 330.0}
+  - {high: 430.0, low: 380.0}
+  - {high: 500.0, low: 430.0}
+  - {high: 800.0, low: 500.0}

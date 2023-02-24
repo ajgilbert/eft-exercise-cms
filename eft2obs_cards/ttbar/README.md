@@ -137,7 +137,7 @@ The output of the previous command is 200 YODA files per decay mode, containing 
 yodamerge -o ttbar-tlep-SMEFTsim3/RivetTotal.yoda ttbar-tlep-SMEFTsim3/Rivet_* --no-veto-empty
 yodamerge -o ttbar-tbarlep-SMEFTsim3/RivetTotal.yoda ttbar-tbarlep-SMEFTsim3/Rivet_* --no-veto-empty
 ```
-If you have used the unedited Rivet routine, each of these files will be around to 400 MB, so you might need to merge them in batches of a few files at a time. Next, add the histograms from the two ttbar decay modes using `yodamerge` with th option `--add`:
+If you have used the unedited Rivet routine, each of these files will be around to 400 MB, so you might need to merge them in batches of a few files at a time. Next, add the histograms from the two ttbar decay modes using `yodamerge` with the option `--add`:
 ```sh
 mkdir ttbar-merged
 yodamerge -o ttbar-merged/RivetTotal.yoda ttbar-tlep-SMEFTsim3/RivetTotal.yoda \
@@ -146,6 +146,6 @@ yodamerge -o ttbar-merged/RivetTotal.yoda ttbar-tlep-SMEFTsim3/RivetTotal.yoda \
 Then use the script `get_scaling.py` to produce the JSON file with the EFT scaling parameters $A_{i}$ and $B_{ij}$ (first, copy this file to the main EFT2Obs directory: `eft_exercise_bin_labels.json`):
 ```sh
 python scripts/get_scaling.py -i ttbar-merged/RivetTotal.yoda -o scaling_ttbar-SMEFTsim3 \
-  --hist "/CMS_2018_I1663958/d01-x01-y01" --bin-labels eft_exercise_bin_labels.json \
+  --hist "/CMS_2018_I1663958/d05-x01-y01" --bin-labels eft_exercise_bin_labels.json \
   -c cards/ttbar-tlep-SMEFTsim3/config.json
 ```

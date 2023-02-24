@@ -182,7 +182,7 @@ def ReadTT(resources):
     sm = ReadYodaFile(pred, title='PAPER', col='val')
 
     labels = ReadIndependent(vals, col=0)
-    labels = ['pt_t_bin_%i' % X for X in range(len(labels))]
+    labels = ['pt_tlep_bin_%i' % X for X in range(len(labels))]
     N = len(labels)
     
     bf = ReadDependent(vals, col=0)
@@ -211,8 +211,8 @@ with open('hepdata_inputs/resources.json','r') as f:
 
 # Read in the data for each channel
 channel_data = {
-    #'CMS_hgg_STXS': ReadHgg(resources_dict['hgg']),
-    #'CMS_wgamma': ReadWg(resources_dict['wg']),
+    'CMS_hgg_STXS': ReadHgg(resources_dict['hgg']),
+    'CMS_wgamma': ReadWg(resources_dict['wg']),
     'CMS_singlet': ReadSingleT(resources_dict['single_t']),
     'CMS_ttbar': ReadTT(resources_dict['ttbar'])
 }
