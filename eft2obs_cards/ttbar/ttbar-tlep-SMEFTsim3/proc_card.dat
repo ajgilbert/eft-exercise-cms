@@ -1,0 +1,6 @@
+import model SMEFTsim_topU3l_MwScheme_UFO-massless
+
+generate p p > t t~ NP=0 @0
+add process p p > t t~ j SMHLOOP<=1 NP=0 @1
+
+output ttbar-tlep-SMEFTsim3 -nojpeg 
