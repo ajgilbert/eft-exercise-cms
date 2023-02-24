@@ -14,6 +14,10 @@
     },
     "parameters": [
         {
+            "index": 1,
+            "name": "cg"
+        },
+        {
             "index": 6,
             "name": "chg"
         }

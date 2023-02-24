@@ -1,0 +1,10 @@
+import model SMEFTsim_topU3l_MwScheme_UFO-massless
+
+generate p p > h t t~ QCD<=4 SMHLOOP<=1 NP=0 @0
+add process p p > h t t~ j QCD<=4 SMHLOOP<=1 NP=0 @1
+
+# NP will be introduced in the reweight_card:
+# change process p p > h t t~ QCD<=4 SMHLOOP<=1 NP<=1
+# change process p p > h t t~ j QCD<=4 SMHLOOP<=1 NP<=1 --add
+
+output ttH-SMEFTsim3 -nojpeg 

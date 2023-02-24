@@ -63,7 +63,7 @@ python pca.py \
   wg:measurements/CMS_wgamma.json:scalings/CMS_2021_PAS_SMP_20_005_d54-x01-y01.json,scalings/CMS_2021_PAS_SMP_20_005_d55-x01-y01.json,scalings/CMS_2021_PAS_SMP_20_005_d56-x01-y01.json \
   singlet:measurements/CMS_singlet.json:scalings/CMS_2019_I1744604_d13-x01-y01.json \
   ww:measurements/ATLAS_WW_parsed.yaml:scalings/ATLAS_2019_I1734263_d04-x01-y01.json \
-  zjj:measurements/ATLAS_Zjj_parsed.yaml:scalings/ATLAS_2020_I1803608_d04-x01-y01.json
+  zjj:measurements/ATLAS_Zjj_parsed.yaml:scalings/ATLAS_2020_I1803608_d04-x01-y01.json \
   --rundir examplerun --output rotmatrix.json
 ```
 
@@ -85,7 +85,7 @@ python workspace.py \
   wg:measurements/CMS_wgamma.json:scalings/CMS_2021_PAS_SMP_20_005_d54-x01-y01.json,scalings/CMS_2021_PAS_SMP_20_005_d55-x01-y01.json,scalings/CMS_2021_PAS_SMP_20_005_d56-x01-y01.json \
   singlet:measurements/CMS_singlet.json:scalings/CMS_2019_I1744604_d13-x01-y01.json \
   ww:measurements/ATLAS_WW_parsed.yaml:scalings/ATLAS_2019_I1734263_d04-x01-y01.json \
-  zjj:measurements/ATLAS_Zjj_parsed.yaml:scalings/ATLAS_2020_I1803608_d04-x01-y01.json
+  zjj:measurements/ATLAS_Zjj_parsed.yaml:scalings/ATLAS_2020_I1803608_d04-x01-y01.json \
   --rundir examplerun --rotation rotmatrix.json --output workspace.root
 ```
 
@@ -130,99 +130,4 @@ python ./summaryPlot.py --input 'examplerun/eft_scans.json:eft/*' \
 
 ## EFT2Obs instructions
 
-Set up the SMEFTsim model:
-```sh
-cd EFT2Obs
-source env.sh
-./scripts/setup_model_SMEFTsim3.sh
-```
-
-The cards for each process are in:
-- $W\gamma$: `cards/WG-SMEFTsim3`
-- $H\gamma\gamma$ (qqH only): `cards/qqH-SMEFTsim3`
-- single-top: `cards/st_tch_4f-SMEFTsim3`
-- $WW$: `cards/WW-SMEFTsim3`
-- $Zjj$: `cards/Zjj-SMEFTsim3`
-
-Set up each process and create the gridpack following the standard workflow:
-
-```sh
-./scripts/setup_process.sh [X]-SMEFTsim3
-
-
-python scripts/make_config.py -p WG-SMEFTsim3 -o config_WG-SMEFTsim3.json --pars SMEFT:5,28,104,9,109,107,2 --def-val 0.01 --def-sm 0.0 --def-gen 0.0
-
-python scripts/make_config.py -p qqH-SMEFTsim3 -o config_qqH-SMEFTsim3.json --pars SMEFT:8,4,32,5,26,28,104,30,7,9,107 --def-val 0.01 --def-sm 0.0 --def-gen 0.0
-
-python scripts/make_config.py -p st_tch_4f-SMEFTsim3 -o config_st_tch_4f-SMEFTsim3.json --pars SMEFT:21,23,28,104,29,35,107,42,43,15,17 --def-val 0.01 --def-sm 0.0 --def-gen 0.0
-
-python scripts/make_config.py -p WW-SMEFTsim3 -o config_WW-SMEFTsim3.json --pars SMEFT:2,5,6,9,26,28,30,32,103,104,105,107,108,109,113,115,117,119,121 --def-val 0.01 --def-sm 0.0 --def-gen 0.0
-
-python scripts/make_config.py -p Zjj-SMEFTsim3 -o config_Zjj-SMEFTsim3.json --pars SMEFT:2,5,9,26,28,30,32,36,37,38,39,103,104,105,107 --def-val 0.01 --def-sm 0.0 --def-gen 0.0
-
-./scripts/make_gridpack.sh [X]-SMEFTsim3 0 4
-```
-
-
-
-
-Generate events in a quick local run:
-```sh
-python scripts/run_gridpack.py --seed 1 -e 10000 -p CMS_2021_PAS_SMP_20_005 --gridpack gridpack_WG-SMEFTsim3.tar.gz -o localtest-WG-SMEFTsim3
-
-HIGGSPRODMODE=VBF python scripts/run_gridpack.py --seed 1 -e 10000 -p HiggsTemplateCrossSections  --gridpack gridpack_qqH-SMEFTsim3.tar.gz -o localtest-qqH-SMEFTsim3
-
-python scripts/run_gridpack.py --seed 1 -e 10000 -p CMS_2019_I1744604  --gridpack gridpack_st_tch_4f-SMEFTsim3.tar.gz -o localtest-st_tch_4f-SMEFTsim3
-
-python scripts/run_gridpack.py --seed 1 -e 10000 -p ATLAS_2019_I1734263  --gridpack gridpack_WW-SMEFTsim3.tar.gz -o localtest-WW-SMEFTsim3
-```
-
-Or a set of condor jobs to get better stats:
-```sh
-python scripts/launch_jobs.py --gridpack gridpack_WG-SMEFTsim3.tar.gz -j 50 -s 1 -e 20000 -p CMS_2021_PAS_SMP_20_005 -o WG-SMEFTsim3 --sub-opts '+MaxRuntime = 14400\nrequirements = (OpSysAndVer =?= "CentOS7")' --task-name WG-SMEFTsim3 --dir jobs --job-mode condor
-
-python scripts/launch_jobs.py --gridpack gridpack_st_tch_4f-SMEFTsim3.tar.gz -j 50 -s 1 -e 20000 -p CMS_2019_I1744604 -o st_tch_4f-SMEFTsim3 --sub-opts '+MaxRuntime = 14400\nrequirements = (OpSysAndVer =?= "CentOS7")' --task-name st_tch_4f-SMEFTsim3 --dir jobs --job-mode condor
-
-python scripts/launch_jobs.py --gridpack gridpack_qqH-SMEFTsim3.tar.gz -j 50 -s 1 -e 20000 -p HiggsTemplateCrossSections -o qqH-SMEFTsim3 --sub-opts '+MaxRuntime = 14400\nrequirements = (OpSysAndVer =?= "CentOS7")' --task-name qqH-SMEFTsim3 --dir jobs --job-mode condor --env "HIGGSPRODMODE=VBF"
-```
-
-Or slurm jobs:
-```sh
-python scripts/launch_jobs.py --gridpack gridpack_WG-SMEFTsim3.tar.gz -j 50 -s 1 -e 20000 -p CMS_2021_PAS_SMP_20_005 -o WG-SMEFTsim3 --task-name WG-SMEFTsim3 --dir jobs --job-mode slurm
-
-python scripts/launch_jobs.py --gridpack gridpack_qqH-SMEFTsim3.tar.gz -j 50 -s 1 -e 20000 -p HiggsTemplateCrossSections -o qqH-SMEFTsim3 --task-name qqH-SMEFTsim3 --dir jobs --job-mode slurm --env "HIGGSPRODMODE=VBF"
-
-python scripts/launch_jobs.py --gridpack gridpack_st_tch_4f-SMEFTsim3.tar.gz -j 50 -s 1 -e 20000 -p CMS_2019_I1744604 -o st_tch_4f-SMEFTsim3 --task-name st_tch_4f-SMEFTsim3 --dir jobs --job-mode slurm
-
-python scripts/launch_jobs.py --gridpack gridpack_WW-SMEFTsim3.tar.gz -j 50 -s 1 -e 20000 -p ATLAS_2019_I1734263 -o WW-SMEFTsim3 --task-name WW-SMEFTsim3 --dir jobs --job-mode slurm
-
-python scripts/launch_jobs.py --gridpack gridpack_Zjj-SMEFTsim3.tar.gz -j 50 -s 1 -e 20000 -p ATLAS_2020_I1803608:TYPE=EW_ONLY -o Zjj-SMEFTsim3 --task-name Zjj-SMEFTsim3 --dir jobs --job-mode slurm
-```
-
-
-Merge the output yoda files using `yodamerge -o RivetTotal.yoda Rivet_* --no-veto-empty`.
-
-Produce the scaling term JSON files (the `eft_exercise_bin_labels.json` file is located is included in the root of this repository):
-```sh
-python scripts/get_scaling.py -c config_WG-SMEFTsim3.json -i WG-SMEFTsim3/RivetTotal.yoda --hist "/CMS_2021_PAS_SMP_20_005/d54-x01-y01" --bin-labels eft_exercise_bin_labels.json
-python scripts/get_scaling.py -c config_WG-SMEFTsim3.json -i WG-SMEFTsim3/RivetTotal.yoda --hist "/CMS_2021_PAS_SMP_20_005/d55-x01-y01" --bin-labels eft_exercise_bin_labels.json
-python scripts/get_scaling.py -c config_WG-SMEFTsim3.json -i WG-SMEFTsim3/RivetTotal.yoda --hist "/CMS_2021_PAS_SMP_20_005/d56-x01-y01" --bin-labels eft_exercise_bin_labels.json
-
-python scripts/get_scaling.py -c config_qqH-SMEFTsim3.json -i qqH-SMEFTsim3/RivetTotal.yoda --hist "/HiggsTemplateCrossSections/HTXS_stage1_2_pTjet30" --bin-labels eft_exercise_bin_labels.json --rebin 18,19,20,21,22,23,24,25,26,27,28,29
-
-python scripts/get_scaling.py -c config_st_tch_4f-SMEFTsim3.json -i st_tch_4f-SMEFTsim3/RivetTotal.yoda --hist "/CMS_2019_I1744604/d13-x01-y01" --bin-labels eft_exercise_bin_labels.json
-
-python scripts/get_scaling.py -c config_WW-SMEFTsim3.json -i WW-SMEFTsim3/RivetTotal.yoda --hist "/ATLAS_2019_I1734263/d04-x01-y01" --bin-labels eft_exercise_bin_labels.json
-
-python scripts/get_scaling.py -c config_Zjj-SMEFTsim3.json -i Zjj-SMEFTsim3/RivetTotal.yoda --hist "/ATLAS_2020_I1803608:TYPE=EW_ONLY/d04-x01-y01" --bin-labels eft_exercise_bin_labels.json -o ATLAS_2020_I1803608_d04-x01-y01
-```
-
-Make plots showing the effect of each operator on the observables, e.g.:
-
-```sh
-python scripts/makePlot.py --hist CMS_2019_I1744604_d13-x01-y01.json -c config_st_tch_4f-SMEFTsim3.json --x-title 'top quark p_{T} (GeV)' --show-unc --draw chj3=1.0:4 chl3=1.0:6 cll1=2.5:9 --ratio 0.5,1.5 --translate resources/translate_root_SMEFTsim3.json
-
-python scripts/makePlot.py --hist HiggsTemplateCrossSections_HTXS_stage1_2_pTjet30.json -c config_qqH-SMEFTsim3.json --x-title 'STXS bin' --show-unc --draw chj3=1.0:4 chl3=1.0:6 cll1=2.5:9 --ratio 0.5,1.5 --translate resources/translate_root_SMEFTsim3.json
-
-for P in 54 55 56; do python scripts/makePlot.py --hist CMS_2021_PAS_SMP_20_005_d${P}-x01-y01.json -c config_WG-SMEFTsim3.json --x-title 'Photon p_{T} GeV' --show-unc --draw chj3=1.0:4 chl3=1.0:6 cll1=2.5:9 --ratio 0.5,1.5 --translate resources/translate_root_SMEFTsim3.json; done
-```
+We use EFT2Obs with SMEFTsim3 to generate the EFT parameterisations. The cards for the event generation for each process can be found in the directory `eft2obs_cards`. Instructions can be found [here](eft2obs_cards/README.md)
