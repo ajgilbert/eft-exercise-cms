@@ -26,6 +26,7 @@ import os
 import yaml
 import json
 import ROOT
+import numpy as np
 from argparse import ArgumentParser
 from collections import OrderedDict
 from tools import Measurement, CovTMatrix, MergeCov
@@ -78,8 +79,7 @@ for channel in args.input:
 print('')
 
 
-# Merge the lists of bin labels, POIs, and covariance matrices
-cov_matrix = MergeCov([CovTMatrix(channel_data[X][0].cov) for X in channel_data])
+# Merge the lists of bin labels, POIs
 bin_labels = list()
 POIs = list()
 for X in channel_data:
@@ -89,10 +89,15 @@ for X in channel_data:
             if par not in POIs:
                 POIs.append(par)
 
+# construct block-diagonal covariance matrix
+cov_matrix = TMatrixToArray(MergeCov([CovTMatrix(channel_data[X][0].cov) for X in channel_data]))
+
+# make sure the combined covariance matrix is not rank-deficient (-> can be inverted)
+assert(cov_matrix.shape[0] == cov_matrix.shape[1] == np.linalg.matrix_rank(cov_matrix))
 
 # matrix with linear parametrisations A_i:
 # measurement bins in rows, Wilson coefficients in columns
-lin_param = ROOT.TMatrixD(len(bin_labels), len(POIs))
+lin_param = np.zeros([len(bin_labels), len(POIs)])
 
 # Loop through channels and fill the linear parametrisation matrix
 for X in channel_data:
@@ -113,13 +118,12 @@ for X in channel_data:
 
 
 # Rotate the inverted covariance matrix to the EFT basis
-fisher_matrix = TMMultiply(TMTranspose(lin_param), TMInvert(cov_matrix), lin_param)
+fisher_matrix = np.linalg.multi_dot((lin_param.T, np.linalg.pinv(cov_matrix), lin_param))
 
 # Eigendecomposition of the Fisher matrix
-eigen_fisher = ROOT.TMatrixDEigen(fisher_matrix)
-eigenvalues = eigen_fisher.GetEigenValues()
-eigenvectors = eigen_fisher.GetEigenVectors()
-
+eigen_fisher = np.linalg.svd(fisher_matrix)
+eigenvalues = eigen_fisher[1]
+eigenvectors = eigen_fisher[0].T
 
 # Save matrices to json file
 print('\n<< Saving matrices: %s\n' % outfile)
@@ -127,10 +131,11 @@ with open(outfile, 'w') as fout:
     json.dump(OrderedDict([
         ('input', args.input),
         ('xpars', POIs), 
-        ('ypars', ['EV%s' % (i+1) for i in range(eigenvalues.GetNrows())]),  # ypars = rotationmatrix * xpars
-        ('fishermatrix', TMatrixToArray(fisher_matrix).tolist()),
-        ('rotationmatrix', TMatrixToArray(eigenvectors).T.tolist()),
-        ('eigenvalues', [eigenvalues[i][i] for i in range(eigenvalues.GetNrows())])
+        ('ypars', ['EV%s' % (i+1) for i in range(len(eigenvalues))]),  # ypars = rotationmatrix * xpars
+        ('fishermatrix', fisher_matrix.tolist()),
+        ('rotationmatrix', eigenvectors.tolist()),
+        ('covmatrix', cov_matrix.tolist()),
+        ('eigenvalues', eigenvalues.tolist())
         ]), fout, indent=2)
 
 

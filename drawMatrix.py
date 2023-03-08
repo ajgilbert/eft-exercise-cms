@@ -22,9 +22,9 @@ def TMatrixToTH2(matr, xlabels=[], ylabels=None, drawDiagonal=False):
     if ylabels is None: 
         ylabels = xlabels[:]
     for i,xlab in enumerate(xlabels): 
-        res.GetXaxis().SetBinLabel(i+1, xlab)
+        res.GetXaxis().SetBinLabel(i+1, str(xlab))
     for j,ylab in enumerate(ylabels): 
-        res.GetYaxis().SetBinLabel(Mrow-j, ylab)
+        res.GetYaxis().SetBinLabel(Mrow-j, str(ylab))
     
     # fill TH2
     for icol in range(1, Ncol+1):
@@ -51,7 +51,7 @@ def makeMatrixPlot(matr, xlabels, ylabels, title, file_name):
     canv = ROOT.TCanvas('canv', 'canv', 1000, 1000)
     hist = TMatrixToTH2(matr, xlabels, ylabels)
     hist.SetTitle(title)
-    hist.SetMarkerSize(0.6)
+    hist.SetMarkerSize(1.0)
     hist.GetXaxis().SetLabelSize(0.025)
     hist.GetYaxis().SetLabelSize(0.025)
     hist.Draw('colz text')
